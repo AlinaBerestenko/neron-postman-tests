@@ -1,0 +1,1088 @@
+{
+	"info": {
+		"_postman_id": "71b0bd98-2573-4322-89ac-b9af6661a2c5",
+		"name": "Check the Daily goals achivements (5,15,20 + opinion on questions)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ADMIN Login Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ec577396-0598-4bfd-ae6e-a2f069f29ef3",
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"count\", 0);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "emailOrPhone",
+							"value": "{{admin_email}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{admin_password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{server}}{{admin_port}}/admin/login",
+					"protocol": "http",
+					"host": [
+						"{{server}}{{admin_port}}"
+					],
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIUp with email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "323c78e5-8e04-4b3f-83db-39abceb84fbc",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "60693239-9593-4957-b5f1-587f44feeda9",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"email_random = \"sandbxtest8+\" + random + \"@gmail.com\"",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"email_random\", email_random);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}{{port}}/graphql",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}{{port}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d963906-f1ce-4f04-861e-a3b19c24ae1e",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"userId\", jsonData.data.user.id);",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\"query User { user {id }}\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}{{port}}/graphql",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}{{port}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "408f9e63-06f7-4cb5-826c-4a74eb591d34",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);",
+							"if (tests[\"response code\"] !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{admin_access_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://{{server}}{{admin_port}}/admin/api/user?userId={{userId}}",
+					"protocol": "http",
+					"host": [
+						"{{server}}{{admin_port}}"
+					],
+					"path": [
+						"admin",
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "{{userId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify user Email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f22a2ef6-997b-497f-ac25-7f99719e48da",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\"mutation { verifyCodeWithToken(code:{{emailCode}}){ isVerified }}\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}{{port}}/graphql",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}{{port}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "393d8618-ac04-4971-b4cd-a733180e41ae",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"postman.setEnvironmentVariable(\"userId\", jsonData.data.updateUser.id);",
+							"var user_id = pm.environment.get(\"userId\");",
+							"var email = pm.environment.get(\"email_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"email\"] = jsonData.data.updateUser.email === email;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"gender\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e234da5e-a6cd-46bb-a1aa-b0bd8c81dbbc",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar < 3) {",
+							"    gender = \"MALE\"",
+							"} else if (userAvatar < 6){",
+							"    gender = \"FEMALE\"",
+							"} else {",
+							"    gender = \"UNSPECIFIED\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, email, gender, displayedId, birthday, state, avatar_id }}\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}{{port}}/graphql",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}{{port}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEXT Questions_5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "be0a2117-c195-430b-afff-6cc22ac3027c",
+						"type": "text/javascript",
+						"exec": [
+							"var  question_number = pm.environment.get(\"question_number\");",
+							"var jsonData = JSON.parse(responseBody);",
+							"var question = jsonData.data.nextQuestions;",
+							"var idCount = Object.keys(question).length;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"number of questions\"] = Number(question_number) <= Number(idCount);",
+							"if ((tests[\"response code\"] && tests[\"number of questions\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.nextQuestions[0].id);",
+							"",
+							"var customer = JSON.parse(responseBody);",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a7335842-c6ac-45d2-bcd4-5c3ebeca3ac1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\": \"query {nextQuestions(count: {{question_number}}){id text category}}\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}{{port}}/graphql",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}{{port}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer  to Question_5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "da8f6941-0704-4397-b9c6-6847fbe15413",
+						"type": "text/javascript",
+						"exec": [
+							"var count = pm.globals.get(\"count\");",
+							"if(count<6){",
+							"    postman.setNextRequest(\"NEXT Questions_5\");",
+							"    count = count+1;",
+							"    pm.globals.set(\"count\", count);",
+							"}",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);",
+							"",
+							"var random = pm.environment.get(\"random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"var text_random = pm.environment.get(\"text_random\")",
+							"tests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ae00fce3-7499-424e-afe7-23ffb6fa0a3a",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"I like vitamin water but I drink Fuji more these days, Don't know ,Yes ,No ,maybe ,Big Mac - one love ,Getting married to a ,They rock ,I wish I know ,My boyfriend ,Go to the beach ,Coca cola ,It's not me ,Chinese food ,\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<1; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"  if (i<wordCount-1)",
+							"    text_random += \" \";",
+							"  else",
+							"    text_random += \".\";",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text }}\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}{{port}}/graphql",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}{{port}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check user in AMG service",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "28ca93a0-6daa-446c-9c43-99dd5e596072",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"daily_bronze\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.achievements.DAILY.BRONZE.unlocked.seen).to.eql(false);",
+							"});",
+							"",
+							"pm.test(\"daily_silver\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.achievements.DAILY.SILVER.unlocked).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"achievements_PARTICIPATION_bronze\", function() {",
+							"    var jsonData = pm.response.json();",
+							"   pm.expect(jsonData.achievements.PARTICIPATION.BRONZE.unlocked.seen).to.eql(false);",
+							"});",
+							"",
+							"pm.test(\"pointsAmount\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.pointsAmount).to.eql(200);",
+							"});",
+							"",
+							"pm.test(\"transactions\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.transactions[0].reward).to.eql(\"BRONZE\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://{{server}}{{amg_port}}/v2/users/{{userId}}",
+					"protocol": "http",
+					"host": [
+						"{{server}}{{amg_port}}"
+					],
+					"path": [
+						"v2",
+						"users",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEXT Questions_15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6992adf9-d9ce-4d4e-8ad4-93e89bf806df",
+						"type": "text/javascript",
+						"exec": [
+							"var  question_number = pm.environment.get(\"question_number\");",
+							"var jsonData = JSON.parse(responseBody);",
+							"var question = jsonData.data.nextQuestions;",
+							"var idCount = Object.keys(question).length;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"number of questions\"] = Number(question_number) <= Number(idCount);",
+							"if ((tests[\"response code\"] && tests[\"number of questions\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.nextQuestions[0].id);",
+							"",
+							"var customer = JSON.parse(responseBody);",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a7335842-c6ac-45d2-bcd4-5c3ebeca3ac1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\": \"query {nextQuestions(count: {{question_number}}){id text category}}\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}{{port}}/graphql",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}{{port}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer  to Question_15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3cb00495-226d-4d10-9fd8-7beb9f054315",
+						"type": "text/javascript",
+						"exec": [
+							"var count = pm.globals.get(\"count\");",
+							"if(count<17){",
+							"    postman.setNextRequest(\"NEXT Questions_15\");",
+							"    count = count+1;",
+							"    pm.globals.set(\"count\", count);",
+							"}",
+							"",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);",
+							"",
+							"var random = pm.environment.get(\"random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"var text_random = pm.environment.get(\"text_random\")",
+							"tests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ae00fce3-7499-424e-afe7-23ffb6fa0a3a",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"I like vitamin water but I drink Fuji more these days, Don't know ,Yes ,No ,maybe ,Big Mac - one love ,Getting married to a ,They rock ,I wish I know ,My boyfriend ,Go to the beach ,Coca cola ,It's not me ,Chinese food ,\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<1; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"  if (i<wordCount-1)",
+							"    text_random += \" \";",
+							"  else",
+							"    text_random += \".\";",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text }}\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}{{port}}/graphql",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}{{port}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check user in AMG service",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "39e8462c-58be-4989-be31-7c65da3c591d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"daily_silver\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.achievements.DAILY.SILVER.unlocked.seen).to.eql(false);",
+							"});",
+							"",
+							"pm.test(\"daily_gold\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.achievements.DAILY.GOLD.unlocked).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"achievements_PARTICIPATION_bronze\", function() {",
+							"    var jsonData = pm.response.json();",
+							"   pm.expect(jsonData.achievements.PARTICIPATION.BRONZE.unlocked.seen).to.eql(false);",
+							"});",
+							"",
+							"pm.test(\"pointsAmount\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.pointsAmount).to.eql(400);",
+							"});",
+							"",
+							"pm.test(\"transactions\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.transactions[0].reward).to.eql(\"SILVER\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://{{server}}{{amg_port}}/v2/users/{{userId}}",
+					"protocol": "http",
+					"host": [
+						"{{server}}{{amg_port}}"
+					],
+					"path": [
+						"v2",
+						"users",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEXT Questions_30",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6992adf9-d9ce-4d4e-8ad4-93e89bf806df",
+						"type": "text/javascript",
+						"exec": [
+							"var  question_number = pm.environment.get(\"question_number\");",
+							"var jsonData = JSON.parse(responseBody);",
+							"var question = jsonData.data.nextQuestions;",
+							"var idCount = Object.keys(question).length;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"number of questions\"] = Number(question_number) <= Number(idCount);",
+							"if ((tests[\"response code\"] && tests[\"number of questions\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.nextQuestions[0].id);",
+							"",
+							"var customer = JSON.parse(responseBody);",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a7335842-c6ac-45d2-bcd4-5c3ebeca3ac1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\": \"query {nextQuestions(count: {{question_number}}){id text category}}\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}{{port}}/graphql",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}{{port}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer  to Question_30",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bc348e34-d45b-4436-baeb-49a25511084b",
+						"type": "text/javascript",
+						"exec": [
+							"var count = pm.globals.get(\"count\");",
+							"if(count<32){",
+							"    postman.setNextRequest(\"NEXT Questions_30\");",
+							"    count = count+1;",
+							"    pm.globals.set(\"count\", count);",
+							"}",
+							"",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);",
+							"",
+							"var random = pm.environment.get(\"random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"var text_random = pm.environment.get(\"text_random\")",
+							"tests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ae00fce3-7499-424e-afe7-23ffb6fa0a3a",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"I like vitamin water but I drink Fuji more these days, Don't know ,Yes ,No ,maybe ,Big Mac - one love ,Getting married to a ,They rock ,I wish I know ,My boyfriend ,Go to the beach ,Coca cola ,It's not me ,Chinese food ,\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<1; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"  if (i<wordCount-1)",
+							"    text_random += \" \";",
+							"  else",
+							"    text_random += \".\";",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text }}\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}{{port}}/graphql",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}{{port}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check user in AMG service",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6598e7f2-0d6a-4672-a66b-e1b332e511db",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"daily_gold\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.achievements.DAILY.GOLD.unlocked.seen).to.eql(false);",
+							"});",
+							"",
+							"pm.test(\"achievements_PARTICIPATION_bronze\", function() {",
+							"    var jsonData = pm.response.json();",
+							"   pm.expect(jsonData.achievements.PARTICIPATION.BRONZE.unlocked.seen).to.eql(false);",
+							"});",
+							"",
+							"pm.test(\"pointsAmount\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.pointsAmount).to.eql(700);",
+							"});",
+							"",
+							"pm.test(\"transactions\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.transactions[0].amount).to.eql(300);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://{{server}}{{amg_port}}/v2/users/{{userId}}",
+					"protocol": "http",
+					"host": [
+						"{{server}}{{amg_port}}"
+					],
+					"path": [
+						"v2",
+						"users",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "cc0a37f1-cd6d-4c9a-a930-baf1d01b915c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8436aaa3-473f-4f2f-9f97-2ca1fd524354",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

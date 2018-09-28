@@ -1,0 +1,930 @@
+{
+	"id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+	"name": "N_TESTS_Send_push",
+	"description": "",
+	"order": [
+		"4bd6b285-431f-faa1-b885-792cb8940d52",
+		"13f6a656-b33a-85f7-4a9b-c5a62657063f",
+		"1ffc0a1f-34e1-2da9-ba6c-4fa139db6548",
+		"1a2e66bd-c1ea-b82f-85db-681ccb59976f",
+		"e08e2309-b913-d7dc-1b51-0cc4798c1c3f",
+		"ebd774bc-0141-0582-5da0-f251069de07a",
+		"904dc513-e2f5-3df2-705e-ca29eb0a8f97",
+		"d57c6366-7186-fa61-b066-731dc19d901f",
+		"48c9d345-9cd9-ae5d-cbde-70086f799bde",
+		"404edf47-3444-48ce-9584-353ab26fb25b",
+		"9104d9a8-db52-fd3a-efc9-aecf3b7d4d17",
+		"c6ec3e7d-cd65-0aeb-e185-38d50579555a",
+		"07cd64c3-4ca7-998d-4e5c-fd5207b133dc",
+		"70adea10-d65d-b3d3-5c77-a6dec4d76831"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1530527273799,
+	"owner": "2436859",
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "07cd64c3-4ca7-998d-4e5c-fd5207b133dc",
+			"name": "Update User Email copy",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbae2fb2-ea24-4909-a1a7-a47e1d035170",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var user_id = pm.environment.get(\"user_id\");",
+							"var email = pm.environment.get(\"email_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"email\"] = jsonData.data.updateUser.email === email;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							"if ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, email, gender, displayedId, birthday, state, avatar_id }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"auth": null,
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"isFromCollection": true,
+			"preRequestScript": "var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);\nvar gender;\nif (userAvatar >= 6) {\n    gender = \"MALE\"\n} else {\n    gender = \"FEMALE\"\n}\npostman.setEnvironmentVariable(\"userAvatar\", userAvatar);\npostman.setEnvironmentVariable(\"gender\", gender);",
+			"tests": "var jsonData = JSON.parse(responseBody);\nvar user_id = pm.environment.get(\"user_id\");\nvar email = pm.environment.get(\"email_random\");\nvar gender = pm.environment.get(\"gender\");\nvar random = pm.environment.get(\"random\");\nvar userAvatar = pm.environment.get(\"userAvatar\")\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"userId\"] = jsonData.data.updateUser.id === user_id;\ntests[\"email\"] = jsonData.data.updateUser.email === email;\ntests[\"gender\"] = jsonData.data.updateUser.gender === gender;\ntests[\"displayedId\"] = responseBody.has(\"displayedId\");\ntests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);\ntests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";\ntests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);\nif ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "13f6a656-b33a-85f7-4a9b-c5a62657063f",
+			"name": "SignIUp with email",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ec05785-60ba-4214-9782-4c65ec0922e8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8abb0329-d4be-4f25-95d5-2b4ff02d5f11",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"email_random = \"sandbxtest8+\" + random + \"@gmail.com\"",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"email_random\", email_random);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"preRequestScript": "var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);\nemail_random = \"sandbxtest8+\" + random + \"@gmail.com\"\npostman.setEnvironmentVariable(\"random\", random);\npostman.setEnvironmentVariable(\"email_random\", email_random);",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);\ntests[\"Body matches string\"] = responseBody.has(\"access_token\");\ntests[\"response code\"] = responseCode.code === 200;\nif ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "1a2e66bd-c1ea-b82f-85db-681ccb59976f",
+			"headers": "Authorization: Bearer {{admin_access_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{admin_access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://{{server}}{{admin_port}}/admin/api/user?userId={{user_id}}",
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "{{user_id}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "20fd7213-6562-4508-ae89-16ad1a2cf2f7",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);",
+							"if (tests[\"response code\"] !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"auth": null,
+			"time": 1528111559780,
+			"name": "getUser code",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"responses": [],
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\npostman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);\nif (tests[\"response code\"] !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "1ffc0a1f-34e1-2da9-ba6c-4fa139db6548",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"queryParams": [],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "29c1674f-11e9-4d88-8f87-9a63a6b841e2",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if (tests[\"response code\"] !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1527836545332,
+			"name": "Get user id",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"responses": [],
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"rawModeData": "{\n\t\"query\":\"query User { user {id }}\"\n}",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);\ntests[\"response code\"] = responseCode.code === 200;\nif (tests[\"response code\"] !==true ) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "404edf47-3444-48ce-9584-353ab26fb25b",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"queryParams": [],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "29c1674f-11e9-4d88-8f87-9a63a6b841e2",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if (tests[\"response code\"] !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1527836545332,
+			"name": "Get user id copy",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"responses": [],
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"rawModeData": "{\n\t\"query\":\"query User { user {id }}\"\n}",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);\ntests[\"response code\"] = responseCode.code === 200;\nif (tests[\"response code\"] !==true ) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "48c9d345-9cd9-ae5d-cbde-70086f799bde",
+			"name": "SignIUp with email copy",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ec05785-60ba-4214-9782-4c65ec0922e8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8abb0329-d4be-4f25-95d5-2b4ff02d5f11",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"email_random = \"sandbxtest8+\" + random + \"@gmail.com\"",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"email_random\", email_random);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"preRequestScript": "var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);\nemail_random = \"sandbxtest8+\" + random + \"@gmail.com\"\npostman.setEnvironmentVariable(\"random\", random);\npostman.setEnvironmentVariable(\"email_random\", email_random);",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);\ntests[\"Body matches string\"] = responseBody.has(\"access_token\");\ntests[\"response code\"] = responseCode.code === 200;\nif ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "4bd6b285-431f-faa1-b885-792cb8940d52",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://{{server}}{{admin_port}}/admin/login",
+			"queryParams": [],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1277a7c-3cc6-446e-849a-216caceb047f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "emailOrPhone",
+					"value": "{{admin_email}}",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "{{admin_password}}",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"auth": null,
+			"time": 1528109544111,
+			"name": "ADMIN Login",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"responses": [],
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"folder": null,
+			"id": "70adea10-d65d-b3d3-5c77-a6dec4d76831",
+			"name": "Answer  to Question copy",
+			"dataMode": "raw",
+			"data": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c0d19089-d179-469d-a89f-552e74c5f256",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);",
+							"",
+							"var text_random= pm.environment.get(\"text_random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d0f4832c-21eb-4b9a-94e0-f4e0b82105ca",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"  var alphabet = \"Apple ,Samsung ,Coffe ,friend ,milk ,Dima ,Alina ,iPad ,Basilur ,KFC ,PlayStation ,Love ,USA ,CANADA ,freindship ,mother ,Tesla ,Amazon ,Netflix ,Incyte ,Naver ,Asian Paints ,Adobe Systems ,Autodesk ,Illumina , Don't know ,Yes ,No ,maybe ,Apricot ,Avocado ,Banana ,Bilberry ,Blackberry ,Blackcurrant ,Blueberry ,Boysenberry ,Buddha's hand (fingered citron) ,Crab apples ,Currant ,Cherry ,Cherimoya ,Chico fruit ,Cloudberry ,Coconut ,Cranberry ,Cucumber ,Custard apple ,Lost Tree ,The Cotton Tree ,Drago Milenario ,Cypress of Abarkuh ,Los Angeles ,San Luis Obispo ,Kings ,Banning ,\".split(\",\");",
+							"  var wordCount = 1;",
+							"    for(var i=0; i<wordCount; i++) {",
+							"    var rand = null;",
+							"      for (var x=0; x<5; x++) {",
+							"        rand = Math.floor(Math.random() * alphabet.length);",
+							"        text_random += alphabet[rand];",
+							"  }",
+							"  if (i<wordCount-1)",
+							"    text_random += \" \";",
+							"  else",
+							"    text_random += \".\";",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"rawModeData": "{\n  \"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text }}\"\n}",
+			"descriptionFormat": null,
+			"description": null,
+			"variables": null,
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"isFromCollection": true,
+			"preRequestScript": "var text_random = \"\";\nfunction randomtext(){\n\n  var alphabet = \"Apple ,Samsung ,Coffe ,friend ,milk ,Dima ,Alina ,iPad ,Basilur ,KFC ,PlayStation ,Love ,USA ,CANADA ,freindship ,mother ,Tesla ,Amazon ,Netflix ,Incyte ,Naver ,Asian Paints ,Adobe Systems ,Autodesk ,Illumina , Don't know ,Yes ,No ,maybe ,Apricot ,Avocado ,Banana ,Bilberry ,Blackberry ,Blackcurrant ,Blueberry ,Boysenberry ,Buddha's hand (fingered citron) ,Crab apples ,Currant ,Cherry ,Cherimoya ,Chico fruit ,Cloudberry ,Coconut ,Cranberry ,Cucumber ,Custard apple ,Lost Tree ,The Cotton Tree ,Drago Milenario ,Cypress of Abarkuh ,Los Angeles ,San Luis Obispo ,Kings ,Banning ,\".split(\",\");\n  var wordCount = 1;\n    for(var i=0; i<wordCount; i++) {\n    var rand = null;\n      for (var x=0; x<5; x++) {\n        rand = Math.floor(Math.random() * alphabet.length);\n        text_random += alphabet[rand];\n  }\n  if (i<wordCount-1)\n    text_random += \" \";\n  else\n    text_random += \".\";\n}\n}\nrandomtext()\npostman.setEnvironmentVariable(\"text_random\", text_random);",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);\n\nvar text_random= pm.environment.get(\"text_random\");\nvar id = Number(pm.environment.get(\"question_id\"));\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;\ntests[\"id\"] = responseBody.has(\"id\")\nif ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"id\"] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n\n\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"folder": null,
+			"id": "904dc513-e2f5-3df2-705e-ca29eb0a8f97",
+			"name": "ASK Question copy",
+			"dataMode": "raw",
+			"data": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4dc30c68-e824-4305-a79d-ee88a163393d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.askQuestion.id);",
+							"postman.setEnvironmentVariable(\"createdAt\", jsonData.data.askQuestion.createdAt);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"id\");",
+							"if ((tests[\"response code\"] && tests[\"Body matches string\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c7c6cf58-c79c-4912-a43a-2a50fb650b40",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"postman.setEnvironmentVariable(\"random\", random);"
+						]
+					}
+				}
+			],
+			"rawModeData": "{\n  \"query\" : \"mutation ask{askQuestion (text:\\\"What is it? {{random}}\\\"){id text createdAt}  }\"\n}",
+			"descriptionFormat": null,
+			"description": null,
+			"variables": null,
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"isFromCollection": true,
+			"preRequestScript": "var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);\npostman.setEnvironmentVariable(\"random\", random);",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"question_id\", jsonData.data.askQuestion.id);\npostman.setEnvironmentVariable(\"createdAt\", jsonData.data.askQuestion.createdAt);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"Body matches string\"] = responseBody.has(\"id\");\nif ((tests[\"response code\"] && tests[\"Body matches string\"] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n\n\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "9104d9a8-db52-fd3a-efc9-aecf3b7d4d17",
+			"headers": "Authorization: Bearer {{admin_access_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{admin_access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://{{server}}{{admin_port}}/admin/api/user?userId={{user_id}}",
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "{{user_id}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "20fd7213-6562-4508-ae89-16ad1a2cf2f7",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);",
+							"if (tests[\"response code\"] !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"auth": null,
+			"time": 1528111559780,
+			"name": "getUser code copy",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"responses": [],
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\npostman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);\nif (tests[\"response code\"] !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "c6ec3e7d-cd65-0aeb-e185-38d50579555a",
+			"name": "Verify user Email copy",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b4b9559-3271-4eb1-ac7a-133a6aeb0431",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation { verifyCodeWithToken(code:{{emailCode}}){ isVerified }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"auth": null,
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\n\ntests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";\ntests[\"response code\"] = responseCode.code === 200;\nif ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "d57c6366-7186-fa61-b066-731dc19d901f",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"folder": null,
+			"queryParams": [],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9c82c074-c8f5-482b-9df4-45b0047a0bbe",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0c996026-68fb-4053-8c3c-39c50973503b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1530527515674,
+			"name": "Register push",
+			"description": null,
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"responses": [],
+			"preRequestScript": null,
+			"tests": "\n\n\n",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n  \"query\" : \"mutation push { registerPushToken(token:\\\"{{push_token}}\\\"){    message    code  }}\"\n}"
+		},
+		{
+			"id": "e08e2309-b913-d7dc-1b51-0cc4798c1c3f",
+			"name": "Verify user Email",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b4b9559-3271-4eb1-ac7a-133a6aeb0431",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation { verifyCodeWithToken(code:{{emailCode}}){ isVerified }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"auth": null,
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\n\ntests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";\ntests[\"response code\"] = responseCode.code === 200;\nif ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "ebd774bc-0141-0582-5da0-f251069de07a",
+			"name": "Update User Email",
+			"collectionId": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbae2fb2-ea24-4909-a1a7-a47e1d035170",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var user_id = pm.environment.get(\"user_id\");",
+							"var email = pm.environment.get(\"email_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"email\"] = jsonData.data.updateUser.email === email;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							"if ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, email, gender, displayedId, birthday, state, avatar_id }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"auth": null,
+			"collection_id": "fd708218-4a97-02c0-ccb0-a82a51316f90",
+			"preRequestScript": "var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);\nvar gender;\nif (userAvatar >= 6) {\n    gender = \"MALE\"\n} else {\n    gender = \"FEMALE\"\n}\npostman.setEnvironmentVariable(\"userAvatar\", userAvatar);\npostman.setEnvironmentVariable(\"gender\", gender);",
+			"tests": "var jsonData = JSON.parse(responseBody);\nvar user_id = pm.environment.get(\"user_id\");\nvar email = pm.environment.get(\"email_random\");\nvar gender = pm.environment.get(\"gender\");\nvar random = pm.environment.get(\"random\");\nvar userAvatar = pm.environment.get(\"userAvatar\")\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"userId\"] = jsonData.data.updateUser.id === user_id;\ntests[\"email\"] = jsonData.data.updateUser.email === email;\ntests[\"gender\"] = jsonData.data.updateUser.gender === gender;\ntests[\"displayedId\"] = responseBody.has(\"displayedId\");\ntests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);\ntests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";\ntests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);\nif ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		}
+	]
+}

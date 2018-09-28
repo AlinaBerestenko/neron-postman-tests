@@ -1,0 +1,720 @@
+{
+	"id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+	"name": "N_TESTS_AUTHORIZATION SECURITY",
+	"description": "",
+	"order": [
+		"cebc69f8-3bca-4eef-4de1-a059eb42a60b",
+		"024542d0-b918-7fa0-8396-90c7c4e26f4e",
+		"466f2991-7bd4-3393-ed60-533b01a3cefc",
+		"7785de43-e831-22f4-9274-b2920da2b1ef",
+		"2ff3a864-37f7-4b0d-10a2-1ed7a7fa3e58",
+		"a300730c-7fb2-3b10-d335-e522c01c8cec",
+		"8dbb8d70-8aba-d1a7-96e6-ea60b681b748",
+		"7e5beb55-fcb0-251d-73a6-f876adaaf96a",
+		"e598f534-9805-58e9-f2cb-bfb7632a41eb",
+		"47b526da-ef4a-1878-7640-1fd5f6a92c48",
+		"4373b417-b562-2582-ba8d-127ddbb7f260",
+		"2b8256d3-ec15-8a38-9d43-0fc9865eb97e",
+		"44751981-187c-ea9b-b513-a9c0b197a8ac"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "2436859",
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "024542d0-b918-7fa0-8396-90c7c4e26f4e",
+			"name": "Next Question",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "11f7287c-8c17-4c0f-9395-9c02da69c714",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7cc617ef-35ef-4a46-aa72-49043bde261c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"query { nextQuestions (count:100){ id  text }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "2b8256d3-ec15-8a38-9d43-0fc9865eb97e",
+			"name": "Sign Url",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d61bcdd7-7890-4c70-bd9e-f552b25b27ee",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\" : \"mutation ur{signUrl(fileType:\\\"png\\\"){fileName uploadUrl url}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "2ff3a864-37f7-4b0d-10a2-1ed7a7fa3e58",
+			"name": "Ask Question",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1e87f7b0-b313-41c4-bd89-ea0ed645126c",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7cc617ef-35ef-4a46-aa72-49043bde261c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation {askQuestion (text:\\\"What are you think about security?\\\"){ id text }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "4373b417-b562-2582-ba8d-127ddbb7f260",
+			"name": "UnLike Question",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6db274de-67a1-4330-ae0d-414a8634540e",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\" : \"mutation {unlikeQuestion(questionId: \\\"{{question_id}}\\\") { message code}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "44751981-187c-ea9b-b513-a9c0b197a8ac",
+			"name": "Fileter Answer by Tag",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ed998fb9-54be-450f-94e7-99d8145be9f0",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\" : \"query filt111 {filterAnswersByTag(tag:\\\"\\\" questionId:\\\"\\\") { edges{cursor node {text}} }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "466f2991-7bd4-3393-ed60-533b01a3cefc",
+			"name": "Questions",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0c9b9f67-2c16-431e-a3c3-61e5dc9dc09e",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7cc617ef-35ef-4a46-aa72-49043bde261c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"query { questions (type:ASKED){ edges {cursor node{id text}} pageInfo {hasNextPage hasPreviousPage} totalCount totalNewAnswersCount }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "47b526da-ef4a-1878-7640-1fd5f6a92c48",
+			"name": "Like Question",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b4b54bb4-4975-43d2-94ce-6ac13f09087b",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\" : \"mutation {likeQuestion(questionId: \\\"{{question_id}}\\\") { message code}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "7785de43-e831-22f4-9274-b2920da2b1ef",
+			"name": "Update User",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dbf598c0-5397-471a-9bc0-1be0eccc0d40",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7cc617ef-35ef-4a46-aa72-49043bde261c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation { updateUser (birthday:1524126064996, gender:FEMALE, avatar_id:2, ){ id displayedId}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "7e5beb55-fcb0-251d-73a6-f876adaaf96a",
+			"name": "Skip Question",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c7b4fed3-03c4-476b-84aa-bdca99968d3f",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7cc617ef-35ef-4a46-aa72-49043bde261c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation {skipQuestion (questionId:\\\"asdasd\\\"){message code }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "8dbb8d70-8aba-d1a7-96e6-ea60b681b748",
+			"name": "Verify Code With Token",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f9b2f65b-ea1d-4af2-bbd6-156d7c839ea2",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "afc53e2e-1ea4-46fb-8ca4-6836522eb227",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (999999 - 100000)+100000);",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation code22{verifyCodeWithToken(code:{{random}}){isVerified}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": "var random =  Math.floor(Math.random() * (999999 - 100000)+100000);\npostman.setEnvironmentVariable(\"random\", random);\n",
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "a300730c-7fb2-3b10-d335-e522c01c8cec",
+			"name": "Answer Question",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "62da937a-226b-4059-905d-ad393ab9e081",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7cc617ef-35ef-4a46-aa72-49043bde261c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation { answerQuestion (questionId:\\\"askdasAAs\\\" text:\\\"Yes, it test\\\") {  id}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "cebc69f8-3bca-4eef-4de1-a059eb42a60b",
+			"name": "User",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c8f7f5a6-16aa-4cb6-a2c6-54f6df2d4bd2",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7cc617ef-35ef-4a46-aa72-49043bde261c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"query user{ user {  id  displayedId }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "e598f534-9805-58e9-f2cb-bfb7632a41eb",
+			"name": "Flaq Question",
+			"collectionId": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d5c9b94d-05d0-4197-8a83-b20657732df1",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002",
+							"if ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "dad77172-74fc-4f5f-aa76-8b6a38e11d98",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation {flagQuestion(questionId:\\\"AsaAsaA\\\" reason:EXPLICIT_TEXT_GRAPHIC){message code}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "065c0bb7-12fb-d20b-dac7-2854b0522831",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"errorCode\"] = jsonData.errors[0].errorCode === 401002\nif ((tests[\"errorCode\"] && tests[\"response code\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n    \n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		}
+	]
+}

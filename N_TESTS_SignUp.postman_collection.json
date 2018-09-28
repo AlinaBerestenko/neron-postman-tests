@@ -1,0 +1,1764 @@
+{
+	"id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+	"name": "N_TESTS_SignUp",
+	"description": "",
+	"order": [
+		"4ceb1d21-185c-ce06-99a5-4cbb3a6f36fa",
+		"8486554c-85d5-cd1c-ff52-b09285128f10",
+		"0ffec125-ff42-4401-7489-d5fa94e09ae3",
+		"3bea90aa-374e-fd7d-1da6-c050defa889e",
+		"140f1723-a18c-007f-d35d-7c1a94351520",
+		"9bbcd65b-dbab-5c65-16f3-d95e7d2fbad5",
+		"b75e7022-328d-cf2f-6f98-4fd6923765e3",
+		"9784dac0-1e41-ebc6-2f98-6773931b3ee3",
+		"713195cf-b0e3-9c8d-5242-65bf292ace4c",
+		"14e24d48-caeb-02d9-578d-6b84cf086f69",
+		"84e87844-d331-7094-2d83-865f6a32f307",
+		"add9212b-29e0-f3cf-3e9f-1beb73040c81",
+		"47fa6ea1-a91d-c629-d493-79f659c2bd39",
+		"c4572f82-6283-84a5-6b39-4b198d39b526",
+		"cdf53ce2-f439-84ee-e2ed-d0dbd5479420",
+		"85fbb68f-9b9d-81c2-7625-261cb804277a",
+		"c17e0b2f-9c3a-0545-af62-d4df4de2d08a",
+		"e94221ce-efec-63de-98ce-0865bb4b61db",
+		"8d210bba-e8f0-167c-b365-33ffaefe896e",
+		"8745e20f-4bff-d68f-59d0-ab9bf982464f",
+		"6a535bd1-231d-95a9-e396-0413bdf95621",
+		"8d914fb9-df65-f39a-e5eb-a7e3d5662bc7",
+		"0889da4a-1d82-8aa2-a5ab-49996e6c4af4",
+		"71d5bcbd-6c5b-59e1-7950-d6467180a9c2",
+		"1fbbc0a3-75de-18ed-b735-3658271b9834",
+		"3316f3e2-f77a-2efc-2dff-d6730a4b6cdf",
+		"514aa93d-4b42-1990-e137-305b61a82499",
+		"c71e1fff-f914-4abd-6261-a08172233233",
+		"2a4fb81c-dfa8-f95e-82b2-cbfc043cd44f",
+		"a287a6b4-21d7-89bf-f877-d19df449440d",
+		"14cc2f80-8bbb-2ab8-f131-9a197bb87018",
+		"3433beab-8c32-4fc7-a274-09788ff6ef71"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "2436859",
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "0889da4a-1d82-8aa2-a5ab-49996e6c4af4",
+			"name": "SignIUp with EXIST phone",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1b1a1179-3566-4235-802c-8dc7fa9dcaf1",
+						"type": "text/javascript",
+						"exec": [
+							"var phone_random = pm.environment.get(\"phone_random\");",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400002);",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{phone_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var phone_random = pm.environment.get(\"phone_random\");\nvar jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400002);\nif ((tests[\"response code\"] && tests[\"errorCode\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "0ffec125-ff42-4401-7489-d5fa94e09ae3",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"queryParams": [],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "29c1674f-11e9-4d88-8f87-9a63a6b841e2",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if (tests[\"response code\"] !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1527836545332,
+			"name": "Get user id",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"responses": [],
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);\ntests[\"response code\"] = responseCode.code === 200;\nif (tests[\"response code\"] !==true ) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n\n",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\"query\":\"query User { user {id }}\"\n}"
+		},
+		{
+			"id": "140f1723-a18c-007f-d35d-7c1a94351520",
+			"name": "Verify user Email",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b4b9559-3271-4eb1-ac7a-133a6aeb0431",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation { verifyCodeWithToken(code:{{emailCode}}){ isVerified }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\n\ntests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";\ntests[\"response code\"] = responseCode.code === 200;\nif ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "14cc2f80-8bbb-2ab8-f131-9a197bb87018",
+			"name": "SignIUp with Phone + INVALIDE password 3 (4 symbols)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "152744ce-4c21-4e26-bd69-dedf37f95d27",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400000);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b4d8a6a7-615c-4d08-8eaa-fa65bae7febe",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"phone_random = \"+38099\" + random",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"phone_random\", phone_random);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation {signup(emailOrPhone:\\\"{{phone_random}}\\\", password:\\\"TeSt\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": "var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);\nphone_random = \"+38099\" + random\npostman.setEnvironmentVariable(\"random\", random);\npostman.setEnvironmentVariable(\"phone_random\", phone_random);",
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400000);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "14e24d48-caeb-02d9-578d-6b84cf086f69",
+			"name": "SignIUp with INVALID email 3(SPACE befor)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a830a799-8235-4e07-a94d-4c4fba62f292",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400014);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\" {{email}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400014);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "1fbbc0a3-75de-18ed-b735-3658271b9834",
+			"name": "SignIUp with INVALID phone 1(small phone number)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c8a0ca9f-6e07-4650-ad51-ea493ae1094d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400014);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"+380453345\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400014);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "2a4fb81c-dfa8-f95e-82b2-cbfc043cd44f",
+			"name": "SignIUp with phone and INVALIDE password 1 (LOW CASE)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5af28ec-7c37-4a7a-92a8-a705a5892833",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400000);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "851217c8-20ba-485e-8190-1144718e730f",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"phone_random = \"+38099\" + random",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"phone_random\", phone_random);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation {signup(emailOrPhone:\\\"{{phone_random}}\\\", password:\\\"testtest\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": "var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);\nphone_random = \"+38099\" + random\npostman.setEnvironmentVariable(\"random\", random);\npostman.setEnvironmentVariable(\"phone_random\", phone_random);",
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400000);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "3316f3e2-f77a-2efc-2dff-d6730a4b6cdf",
+			"name": "SignIUp with INVALID phone 2(SPACE)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "70a5e097-0cf0-4a20-943a-ada0e68aa990",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_tokenP\", jsonData.data.signup.access_token);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"if ((tests[\"response code\"] && tests[\"Body matches string\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{phone_random}}             \\\", password:\\\"{{password}}\\\") {access_token}}\"\n}\n",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"access_tokenP\", jsonData.data.signup.access_token);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"Body matches string\"] = responseBody.has(\"access_token\");\nif ((tests[\"response code\"] && tests[\"Body matches string\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "3433beab-8c32-4fc7-a274-09788ff6ef71",
+			"name": "SignIUp with Phone + INVALIDE password 4 (21 symbols)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "77b8805f-b848-4bb3-8416-381f6d62fb94",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400000);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "81be6588-e71a-4924-adba-c232c388a77c",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"phone_random = \"+38099\" + random",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"phone_random\", phone_random);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": " {\n  \"query\":\"mutation {signup(emailOrPhone:\\\"{{phone_random}}\\\", password:\\\"Test1TestTestTestTest\\\") {access_token}}\"\n}\n\n",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": "var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);\nphone_random = \"+38099\" + random\npostman.setEnvironmentVariable(\"random\", random);\npostman.setEnvironmentVariable(\"phone_random\", phone_random);",
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400000);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "3bea90aa-374e-fd7d-1da6-c050defa889e",
+			"headers": "Authorization: Bearer {{admin_access_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{admin_access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/api/user?userId={{user_id}}",
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "{{user_id}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "20fd7213-6562-4508-ae89-16ad1a2cf2f7",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);",
+							"if (tests[\"response code\"] !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"auth": null,
+			"time": 1530622437084,
+			"name": "getUser code",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"responses": [],
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\npostman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);\nif (tests[\"response code\"] !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "47fa6ea1-a91d-c629-d493-79f659c2bd39",
+			"name": "SignIUp with email and INVALIDE password 2 (UP CASE)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8aa7f821-553d-4948-bb4e-c1ae0ccfe401",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400000);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "cf4f4b8e-d26c-4600-9a64-2682643ecd7b",
+						"type": "text/javascript",
+						"exec": [
+							"var password = pm.environment.get(\"password\");",
+							"var password_upper = password.toUpperCase();",
+							"postman.setEnvironmentVariable(\"password_upper\", password_upper);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email}}\\\", password:\\\"TeSt\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": "var password = pm.environment.get(\"password\");\nvar password_upper = password.toUpperCase();\npostman.setEnvironmentVariable(\"password_upper\", password_upper);",
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400000);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "4ceb1d21-185c-ce06-99a5-4cbb3a6f36fa",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/login",
+			"queryParams": [],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1277a7c-3cc6-446e-849a-216caceb047f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "emailOrPhone",
+					"value": "{{admin_email}}",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "{{admin_password}}",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"auth": null,
+			"time": 1530622433150,
+			"name": "ADMIN Login",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"responses": [],
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "514aa93d-4b42-1990-e137-305b61a82499",
+			"name": "SignIUp with INVALID phone 3 (WITHOUT code)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9640a483-ed70-4d55-881d-68154d44ca3e",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400014);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"0994443322\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400014);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "6a535bd1-231d-95a9-e396-0413bdf95621",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"queryParams": [],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c622886b-7c67-43cb-b9fb-fd60a0b96581",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"if ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1528114076917,
+			"name": "Verify user Phone",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"responses": [],
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";\nif ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\"query\":\"mutation {verifyCodeWithToken(code: {{smsCode}}){ isVerified }}\"\n}"
+		},
+		{
+			"id": "713195cf-b0e3-9c8d-5242-65bf292ace4c",
+			"name": "SignIUp with INVALID email 1 without @",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2dd915bf-6869-4b1b-9380-50024237dbcb",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400014);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"sandbxtest8+3232gmail.com\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400014);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "71d5bcbd-6c5b-59e1-7950-d6467180a9c2",
+			"name": "SignIUp with INVALID phone 1(long phone number)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "716d2dc7-d07a-4cb8-a3d9-ce367212aa6e",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400014);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{phone_random}}345345345\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400014);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "8486554c-85d5-cd1c-ff52-b09285128f10",
+			"name": "SignIUp with email",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ec05785-60ba-4214-9782-4c65ec0922e8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8abb0329-d4be-4f25-95d5-2b4ff02d5f11",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"email_random = \"sandbxtest8+\" + random + \"@gmail.com\"",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"email_random\", email_random);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": "var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);\nemail_random = \"sandbxtest8+\" + random + \"@gmail.com\"\npostman.setEnvironmentVariable(\"random\", random);\npostman.setEnvironmentVariable(\"email_random\", email_random);",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);\ntests[\"Body matches string\"] = responseBody.has(\"access_token\");\ntests[\"response code\"] = responseCode.code === 200;\nif ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "84e87844-d331-7094-2d83-865f6a32f307",
+			"name": "SignIUp with INVALID email 4(SPACE after)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "99867c4c-bf81-41e4-896c-7f11272f4f1d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400014);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email}} \\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400014);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "85fbb68f-9b9d-81c2-7625-261cb804277a",
+			"name": "SignIUp with email password  (20 symbols)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "796117d4-e69a-426c-ab00-4b4f71b69bbc",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"if ((tests[\"response code\"] && tests[\"Body matches string\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": " {\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email}}\\\", password:\\\"TestTestTestTestTest\\\") {access_token}}\"\n}\n\n",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"Body matches string\"] = responseBody.has(\"access_token\");\nif ((tests[\"response code\"] && tests[\"Body matches string\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "8745e20f-4bff-d68f-59d0-ab9bf982464f",
+			"headers": "Authorization: Bearer {{admin_access_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{admin_access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/api/user?userId={{user_id}}",
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "{{user_id}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "54544e29-8eb2-42d9-8b05-d37f5033656c",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"smsCode\", jsonData.user.system.verification_codes.sms);",
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"auth": null,
+			"time": 1530622442369,
+			"name": "getUser code copy",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"responses": [],
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\npostman.setEnvironmentVariable(\"smsCode\", jsonData.user.system.verification_codes.sms);\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "8d210bba-e8f0-167c-b365-33ffaefe896e",
+			"name": "SignIUp with phone ME",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4125251c-4fbc-49b8-92b4-9b657e2de57d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if (tests[\"response code\"] !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"query User { user {id }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);\ntests[\"response code\"] = responseCode.code === 200;\nif (tests[\"response code\"] !==true ) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "8d914fb9-df65-f39a-e5eb-a7e3d5662bc7",
+			"name": "Update User Phone",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4b6a7926-3c76-4c4e-aa43-6438e9483236",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var user_id = pm.environment.get(\"user_id\");",
+							"var phone = pm.environment.get(\"phone_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"phone\"] = jsonData.data.updateUser.phone === \"+\" + phone;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							"if ((tests[\"response code\"] && tests[\"userId\"] && tests[\"phone\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, phone, gender, displayedId, birthday, state, avatar_id }}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": "var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);\nvar gender;\nif (userAvatar >= 6) {\n    gender = \"MALE\"\n} else {\n    gender = \"FEMALE\"\n}\npostman.setEnvironmentVariable(\"userAvatar\", userAvatar);\npostman.setEnvironmentVariable(\"gender\", gender);",
+			"tests": "var jsonData = JSON.parse(responseBody);\nvar user_id = pm.environment.get(\"user_id\");\nvar phone = pm.environment.get(\"phone_random\");\nvar gender = pm.environment.get(\"gender\");\nvar random = pm.environment.get(\"random\");\nvar userAvatar = pm.environment.get(\"userAvatar\")\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"userId\"] = jsonData.data.updateUser.id === user_id;\ntests[\"phone\"] = jsonData.data.updateUser.phone === \"+\" + phone;\ntests[\"gender\"] = jsonData.data.updateUser.gender === gender;\ntests[\"displayedId\"] = responseBody.has(\"displayedId\");\ntests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);\ntests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";\ntests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);\nif ((tests[\"response code\"] && tests[\"userId\"] && tests[\"phone\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "9784dac0-1e41-ebc6-2f98-6773931b3ee3",
+			"name": "SignIUp with INVALID email 2 without dot(.)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42b0d0b6-e6f1-4fb1-9a88-4c513634210a",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400014);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"sandbxtest8+3232@gmailcom\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}\n\n\n\n",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400014);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "9bbcd65b-dbab-5c65-16f3-d95e7d2fbad5",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"queryParams": [],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbae2fb2-ea24-4909-a1a7-a47e1d035170",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var user_id = pm.environment.get(\"user_id\");",
+							"var email = pm.environment.get(\"email_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"email\"] = jsonData.data.updateUser.email === email;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							"if ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7618ee23-8bd0-49a0-82ce-72ed219edcd6",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar < 3) {",
+							"    gender = \"MALE\"",
+							"} else if (userAvatar < 6){",
+							"    gender = \"FEMALE\"",
+							"} else {",
+							"    gender = \"UNSPECIFIED\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1531385442442,
+			"name": "Update User Email",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"responses": [],
+			"preRequestScript": "var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);\nvar gender;\nif (userAvatar < 3) {\n    gender = \"MALE\"\n} else if (userAvatar < 6){\n    gender = \"FEMALE\"\n} else {\n    gender = \"UNSPECIFIED\"\n}\npostman.setEnvironmentVariable(\"userAvatar\", userAvatar);\npostman.setEnvironmentVariable(\"gender\", gender);",
+			"tests": "var jsonData = JSON.parse(responseBody);\nvar user_id = pm.environment.get(\"user_id\");\nvar email = pm.environment.get(\"email_random\");\nvar gender = pm.environment.get(\"gender\");\nvar random = pm.environment.get(\"random\");\nvar userAvatar = pm.environment.get(\"userAvatar\")\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"userId\"] = jsonData.data.updateUser.id === user_id;\ntests[\"email\"] = jsonData.data.updateUser.email === email;\ntests[\"gender\"] = jsonData.data.updateUser.gender === gender;\ntests[\"displayedId\"] = responseBody.has(\"displayedId\");\ntests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);\ntests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";\ntests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);\nif ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, email, gender, displayedId, birthday, state, avatar_id }}\"\n}"
+		},
+		{
+			"id": "a287a6b4-21d7-89bf-f877-d19df449440d",
+			"name": "SignIUp with Phone and INVALIDE password 2 (UP CASE)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a8906d09-d40c-4b22-8c7c-18c40e55b356",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400000);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4ae3f9b5-1d72-4dd0-8cbb-0217cf2d3ac5",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"phone_random = \"+38099\" + random",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"phone_random\", phone_random);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation {signup(emailOrPhone:\\\"{{phone_random}}\\\", password:\\\"TESTTEST\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": "var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);\nphone_random = \"+38099\" + random\npostman.setEnvironmentVariable(\"random\", random);\npostman.setEnvironmentVariable(\"phone_random\", phone_random);",
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400000);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "add9212b-29e0-f3cf-3e9f-1beb73040c81",
+			"name": "SignIUp with email and INVALIDE password 1 (LOW CASE)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b7629061-ba44-4228-99fe-5b3b1c474780",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400000);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "cb1e4a6e-b17b-44be-b20f-b83a394fe439",
+						"type": "text/javascript",
+						"exec": [
+							"var password = pm.environment.get(\"password\");",
+							"var password_lower = password.toLowerCase();",
+							"postman.setEnvironmentVariable(\"password_lower\", password_lower);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email}}\\\", password:\\\"TeSt\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": "var password = pm.environment.get(\"password\");\nvar password_lower = password.toLowerCase();\npostman.setEnvironmentVariable(\"password_lower\", password_lower);",
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400000);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "b75e7022-328d-cf2f-6f98-4fd6923765e3",
+			"name": "SignIUp with EXIST email ",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46ccbe80-8aab-411c-bc6d-1727df6410c9",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var email_random = pm.environment.get(\"email_random\");",
+							"tests['errorCode'] =  responseBody.has(400001);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\nvar email_random = pm.environment.get(\"email_random\");\ntests['errorCode'] =  responseBody.has(400001);\ntests[\"response code\"] = responseCode.code === 200;\nif ((tests[\"response code\"] && tests[\"errorCode\"]) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}\n\n",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "c17e0b2f-9c3a-0545-af62-d4df4de2d08a",
+			"name": "SignIUp with email password  (7 symbols)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6ec58c2f-fc76-43fb-9e84-d79d2584c5fb",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400000);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": " {\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email}}\\\", password:\\\"TestTes\\\") {access_token}}\"\n}\n\n",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400000);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "c4572f82-6283-84a5-6b39-4b198d39b526",
+			"name": "SignIUp with email and INVALIDE password 3 (4 symbols)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "84dbf874-eac9-4b02-b56d-1254cc0f4b40",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400000);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email}}\\\", password:\\\"TeSt\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400000);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "c71e1fff-f914-4abd-6261-a08172233233",
+			"name": "SignIUp with INVALID phone 4(WITH TEXT)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1dfeec1d-65e8-4f06-a805-5a3197c42412",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400014);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"+38ABCDEFGJIKLMN\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}\n",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400014);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "cdf53ce2-f439-84ee-e2ed-d0dbd5479420",
+			"name": "SignIUp with email and INVALIDE password 4 (21 symbols)",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fd0c2f95-5d67-44cb-a317-6b2a18794dc4",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests['errorCode'] =  responseBody.has(400000);",
+							"tests['signup'] = jsonData.data.signup === null;",
+							"if ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": " {\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email}}\\\", password:\\\"Test1TestTestTestTest\\\") {access_token}}\"\n}\n\n",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": null,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"response code\"] = responseCode.code === 200;\ntests['errorCode'] =  responseBody.has(400000);\ntests['signup'] = jsonData.data.signup === null;\nif ((tests[\"response code\"] && tests[\"errorCode\"] && tests['signup'] ) !== true) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "e94221ce-efec-63de-98ce-0865bb4b61db",
+			"name": "SignIUp with phone",
+			"collectionId": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"method": "POST",
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d6cdbe39-a001-4d90-aa6d-25f90c649f2d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"if ((tests['response code'] && tests[\"Body matches string\"]) !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "950a8a41-491d-4e58-8b7c-4f7570aca494",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"phone_random = \"38099\" + random",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"phone_random\", phone_random);"
+						]
+					}
+				}
+			],
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"query\":\"mutation {signup(emailOrPhone:\\\"+{{phone_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"pathVariables": {},
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"auth": null,
+			"collection_id": "619bf8cc-3548-f97c-0c80-27882f85e664",
+			"preRequestScript": "var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);\nphone_random = \"38099\" + random\npostman.setEnvironmentVariable(\"random\", random);\npostman.setEnvironmentVariable(\"phone_random\", phone_random);",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);\ntests[\"response code\"] = responseCode.code === 200;\ntests[\"Body matches string\"] = responseBody.has(\"access_token\");\nif ((tests['response code'] && tests[\"Body matches string\"]) !==true ) {\n    console.log( \"response body: \" ,  responseBody)\n    console.log(\"request: \" ,  request)\n}",
+			"currentHelper": null,
+			"helperAttributes": null
+		}
+	]
+}

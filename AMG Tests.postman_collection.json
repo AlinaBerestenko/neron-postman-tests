@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "88e88ff6-4f85-4a93-88ec-e5105bbaae25",
+		"name": "AMG Tests",
+		"description": "This send events to RabbitMQ and then get responses in AMG via REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SendAnswerEvent",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "neron1!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "neron",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"properties\":{},\"routing_key\":\"\",\n\t\"payload\":\"{\\\"userId\\\":\\\"BJy2L2k_7\\\",\\\"type\\\":\\\"ANSWER\\\",\\\"oldImage\\\":{\\\"id\\\":\\\"rkwx383yuQ\\\",\\\"state\\\":\\\"NOT_VALIDATED\\\",\\\"createdAt\\\":\\\"1536308904380\\\",\\\"questionId\\\":\\\"HkHLxoqsmXuG\\\",\\\"questionUserId\\\":\\\"S1zzCzQOz\\\"},\\\"newImage\\\":{\\\"id\\\":\\\"rkwx383yuQ\\\",\\\"state\\\":\\\"ACTIVE\\\",\\\"createdAt\\\":\\\"1536308904380\\\",\\\"questionId\\\":\\\"HkHLxoqsmXuG\\\",\\\"questionUserId\\\":\\\"S1zzCzQOz\\\"}}\",\"payload_encoding\":\"string\"\n}"
+				},
+				"url": {
+					"raw": "http://dev.be.themind.io:15672/api/exchanges/neron/neron.entity-change.in/publish",
+					"protocol": "http",
+					"host": [
+						"dev",
+						"be",
+						"themind",
+						"io"
+					],
+					"port": "15672",
+					"path": [
+						"api",
+						"exchanges",
+						"neron",
+						"neron.entity-change.in",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8765/accounting?userId=BJy2L2k_7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"accounting"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "BJy2L2k_7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAchievements",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

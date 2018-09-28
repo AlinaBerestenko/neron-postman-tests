@@ -1,0 +1,2854 @@
+{
+	"id": "cfe29a46-692e-8e0a-dc71-117212679ef5",
+	"name": "N_TESTS_NOTIFICATION_CENTER",
+	"description": "",
+	"auth": null,
+	"events": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3d6c28e0-d1eb-4d5e-9f11-197bcac5bffb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "858d10b4-1304-44e5-89d3-d9efa91367e3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variables": [],
+	"order": [
+		"d882bfb0-cf52-df35-4bef-4369d6c5d058",
+		"3f826f06-3bf0-cf58-088f-bc418b5b04d0",
+		"fc410d13-3cbb-0eda-1fde-4b0c8eded869",
+		"97bf139f-2bb1-caed-c6fc-27931317d165",
+		"17b0515c-2944-7dbc-942d-8120c4543f1f",
+		"67f040ff-2646-9356-188d-793b6570a277",
+		"036e8757-1d9c-0d72-aa73-d86fb62817da",
+		"9b63be2b-fc21-4555-a311-e43e94f90775",
+		"855e4efe-1133-05bd-8d63-c3aa5b2c66f7",
+		"270e4e7f-7997-f831-50cb-927013ddd25a",
+		"00b6be7b-2756-c79d-1ffe-d728ecbabbb3",
+		"b1661f86-3a1f-26d6-79a3-e6aec88e1dce",
+		"a80cc9ad-f05a-ba71-9ecf-f056bfb74aa3",
+		"faa8760a-aeb1-a6ed-4da4-b21e6b6e259c",
+		"c035160a-6167-d9f3-c18e-0dc919e0c3ec",
+		"9ea8603f-a60d-4ce7-942d-00bf7157d2ed",
+		"ff8c7cde-33db-ff77-49b3-305170ba3084",
+		"e95044a0-9a5d-76a0-8e07-67987038a813",
+		"d783c969-2810-4eaf-994f-172714bde348",
+		"78862f6c-d111-4dcb-ac86-1e16de8e37bb",
+		"2576ab59-760e-6d14-d143-f683d50831d5",
+		"acaff875-8001-41a2-c3e1-fea33b187ce4",
+		"842c97cd-79be-45b7-92a6-c3637da47bbe",
+		"aaf0d73e-5507-4831-9caa-63759405f8c7",
+		"567fae44-55d8-40e2-a62c-a1091425ccab",
+		"a8fc0391-a839-4c34-bcb2-0b8b4e7ea3d9",
+		"0787d5e3-45fc-4d78-91b7-dc2479d8fb49",
+		"aaf90ab8-b0df-41f7-8c74-252b10e17764",
+		"50bc6960-1b65-4a93-bf78-322e84146786",
+		"f1a48738-2f87-e985-19ea-67a4c983b477",
+		"4d062254-7569-4a14-99cf-9738f8872a54",
+		"ce8bfe8b-8b61-4cdb-a9a3-dc69de0b1ef8",
+		"b2470be4-6f0a-4f83-a92f-55baa5158252",
+		"e3a8353b-ffbe-4f75-aa56-329fc99f08bd",
+		"ae794451-4687-46ce-87d6-30010cc05805",
+		"9e36db5a-6995-4194-b7e2-9001094fdcd3",
+		"00c7d15c-77bf-4495-a31f-5c78ae0fd610",
+		"8ec9e692-f6df-4876-aef6-fc9ccd65fb72",
+		"b9398ce2-188e-4de7-ba02-9fa647996709",
+		"7b772c55-9427-4382-83ca-c34f09c3d96b",
+		"4e01716a-702f-47db-9db8-30a1e05e209f",
+		"fb60f883-9b5e-482f-8bef-c439251e6587",
+		"50d5b219-7d7e-4173-9d2e-b3455b296fcf",
+		"19773b5e-1d1f-200f-5fef-fdb0e5305096"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "00b6be7b-2756-c79d-1ffe-d728ecbabbb3",
+			"name": "Get userId",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bfe8697e-bdd1-44e1-9447-d046c03979a8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if (tests[\"response code\"] !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query User { user {id }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "00c7d15c-77bf-4495-a31f-5c78ae0fd610",
+			"name": "NEWBOARN notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "723ae721-251d-4cf6-9d5d-a024eccb0e8d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 2;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 2;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"AchievementNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === false;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === false;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"",
+							"tests[\"__typename2\"] = jsonData.data.notificationsFeed.edges[1].node.details.__typename === \"BalanceChangeNotificationDetails\";",
+							"tests[\"isSeen2\"] = jsonData.data.notificationsFeed.edges[1].node.isSeen === false;",
+							"tests[\"isRead2\"] = jsonData.data.notificationsFeed.edges[1].node.isRead === false;",
+							"tests[\"count2\"] = jsonData.data.notificationsFeed.edges[1].node.count === 1;",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1767a99b-2840-456f-9624-7da6335836f8",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 30000);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "\n{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "036e8757-1d9c-0d72-aa73-d86fb62817da",
+			"name": "empty notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "53412ec4-c5e6-402c-9da9-c25f5d402b7b",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalCount\"] = jsonData.data.notificationsFeed.totalCount === 0;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 0;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 0;",
+							"var edgesArray = jsonData.data.notificationsFeed.edges;",
+							"tests[\"edges\"] = edgesArray.length == 0;",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0787d5e3-45fc-4d78-91b7-dc2479d8fb49",
+			"name": "getUser code Copy",
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/api/user?userId={{user_id}}",
+			"description": null,
+			"data": [],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{admin_access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "{{user_id}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "20fd7213-6562-4508-ae89-16ad1a2cf2f7",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);",
+							"if (tests[\"response code\"] !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "Authorization: Bearer {{admin_access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "17b0515c-2944-7dbc-942d-8120c4543f1f",
+			"name": "Verify user Email",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b6d94761-c266-41f2-bc94-ad8a63d19d53",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation { verifyCodeWithToken(code:{{emailCode}}){ isVerified }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "19773b5e-1d1f-200f-5fef-fdb0e5305096",
+			"name": "IsRead=true notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e34461d6-a537-4553-8ad9-b486f0605861",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 0;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 0;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"AnswerReactionNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === true;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === true;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ad4b491c-18e2-4ca8-a043-286f0303b218",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "\n{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "2576ab59-760e-6d14-d143-f683d50831d5",
+			"name": "NEW ANSWER notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "617bc56e-9068-49b7-821d-9eb1ca2d05a3",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"postman.setEnvironmentVariable(\"notification_id\", jsonData.data.notificationsFeed.edges[0].node.id);",
+							"var chamber_id= pm.environment.get(\"chamber_id\");",
+							"var chamber_name= pm.environment.get(\"chamber_name\");",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 1;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 1;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"NewAnswerNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === false;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === false;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"tests[\"chamber_id\"] = jsonData.data.notificationsFeed.edges[0].node.details.question.chamber.id === chamber_id;",
+							"tests[\"chamber_name\"] = jsonData.data.notificationsFeed.edges[0].node.details.question.chamber.name === chamber_name;",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4ccef9a9-947e-4b3b-b1b5-11bc450da281",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 30000);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query notificationsFeed {  notificationsFeed(markAllSeen:false){    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text     chamber{id name}       }          }                                                                                                                                                                      ... on QuestionReactionNotificationDetails {            question {              id              text     chamber{id name}      }            reactions {              type              count            }          }                                                                                                                                                                                                                           ... on AnswerReactionNotificationDetails {           answer {             id              text       question{chamber{id name}}    }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "270e4e7f-7997-f831-50cb-927013ddd25a",
+			"name": "SignIUp NEW USER",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c7378750-8e83-4330-823e-d30e67aa8117",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token_new\", jsonData.data.signup.access_token);",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "64bc80aa-aeb2-47db-89d3-86c2189eab4e",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"email_random = \"sandbxtest8+\" + random + \"@gmail.com\"",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"email_random\", email_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3f826f06-3bf0-cf58-088f-bc418b5b04d0",
+			"name": "SignIUp with email",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e7c66392-c137-4e60-988f-1b2470c05a52",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "64bc80aa-aeb2-47db-89d3-86c2189eab4e",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"email_random = \"sandbxtest8+\" + random + \"@gmail.com\"",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"email_random\", email_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4d062254-7569-4a14-99cf-9738f8872a54",
+			"name": "REACT on Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f657d83f-b95c-49c0-aa52-0ee88facc2ea",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"code\"] = jsonData.data.reactQuestion.code === 100011;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches message\"] = responseBody.has(\"Question successfully reacted with JOY.\");",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "480348e5-7387-45cd-beff-10eec8d8ffc5",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 30000);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {reactQuestion(questionId: \\\"{{question_id}}\\\" reaction: JOY){    message    code  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4e01716a-702f-47db-9db8-30a1e05e209f",
+			"name": "NEW ANSWER REACTION notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b91cc69e-f378-44bf-b7af-8e4b0d7f03fa",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"postman.setEnvironmentVariable(\"notification_id\", jsonData.data.notificationsFeed.edges[0].node.id);",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 1;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 1;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"AnswerReactionNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === false;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === false;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "87502060-7f61-44d2-a9ed-369de755a183",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 30000);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "\n{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "50bc6960-1b65-4a93-bf78-322e84146786",
+			"name": "Update User Email Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4896bdc7-2550-4f0b-af5a-c009cc839b91",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var user_id = pm.environment.get(\"user_id\");",
+							"var email = pm.environment.get(\"email_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"email\"] = jsonData.data.updateUser.email === email;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							"if ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, email, gender, displayedId, birthday, state, avatar_id }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "50d5b219-7d7e-4173-9d2e-b3455b296fcf",
+			"name": "READ NOTIFICATION",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5d19fc29-7e60-4bfd-8c3f-089b940f61d8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"message\"] = jsonData.data.markNotificationRead.message === \"Notification successfully read.\";",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "03bce0d4-0c76-446a-9124-0e605198cc8c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation read { markNotificationRead(id: \\\"{{notification_id}}\\\") {    message  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "567fae44-55d8-40e2-a62c-a1091425ccab",
+			"name": "SignIUp NEW USER Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c7378750-8e83-4330-823e-d30e67aa8117",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token_new\", jsonData.data.signup.access_token);",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "64bc80aa-aeb2-47db-89d3-86c2189eab4e",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"email_random = \"sandbxtest8+\" + random + \"@gmail.com\"",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"email_random\", email_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "67f040ff-2646-9356-188d-793b6570a277",
+			"name": "Update User Email",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f9340ea4-17da-415d-910d-0f9a1d1481c6",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var user_id = pm.environment.get(\"user_id_new\");",
+							"var email = pm.environment.get(\"email_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"email\"] = jsonData.data.updateUser.email === email;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							"if ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, email, gender, displayedId, birthday, state, avatar_id }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "78862f6c-d111-4dcb-ac86-1e16de8e37bb",
+			"name": "Answer  to Question Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c0d19089-d179-469d-a89f-552e74c5f256",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);",
+							"",
+							"var text_random= pm.environment.get(\"text_random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f134f3c4-f666-4ca2-9d88-e4103367ca8b",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"I like vitamin water but I drink Fuji more these days,Don't know,Yes,No,Maybe,Big Mac - one love,Getting married to a,They rock,I wish I know,My boyfriend,Go to the beach,Coca cola,It's not me,Chinese food\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<1; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7b772c55-9427-4382-83ca-c34f09c3d96b",
+			"name": "REACT on Answer",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "51b80280-61f7-4ad1-ac21-164396a9d4aa",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"code\"] = jsonData.data.reactAnswer.code === 100013;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches message\"] = responseBody.has(\"Answer successfully reacted with JOY.\");",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "005f815c-bae8-4b9f-adb4-082c645f4e81",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {reactAnswer(answerId: \\\"{{answer_id}}\\\" reaction: JOY){    message    code  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "842c97cd-79be-45b7-92a6-c3637da47bbe",
+			"name": "READ NOTIFICATION",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5d19fc29-7e60-4bfd-8c3f-089b940f61d8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"message\"] = jsonData.data.markNotificationRead.message === \"Notification successfully read.\";",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "03bce0d4-0c76-446a-9124-0e605198cc8c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation read { markNotificationRead(id: \\\"{{notification_id}}\\\") {    message  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "855e4efe-1133-05bd-8d63-c3aa5b2c66f7",
+			"name": "ASK Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e9345225-ddf5-4a3f-b216-d2fa4b3de049",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.askQuestion.id);",
+							"postman.setEnvironmentVariable(\"question_text\", jsonData.data.askQuestion.text);",
+							"postman.setEnvironmentVariable(\"createdAt\", jsonData.data.askQuestion.createdAt);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"id\");",
+							"if ((tests[\"response code\"] && tests[\"Body matches string\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c7c6cf58-c79c-4912-a43a-2a50fb650b40",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"postman.setEnvironmentVariable(\"random\", random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation ask{askQuestion (text:\\\"What is it? {{random}}\\\" chamberId:\\\"{{chamber_id}}\\\"){id text createdAt}  }\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "8ec9e692-f6df-4876-aef6-fc9ccd65fb72",
+			"name": "READ ALL NOTIFICATION",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3d313342-c7fd-45ad-9f72-869efd9dec52",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"message\"] = jsonData.data.markAllNotificationsRead.message === \"All notifications successfully read.\";",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "03bce0d4-0c76-446a-9124-0e605198cc8c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation read { markAllNotificationsRead {    message  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "97bf139f-2bb1-caed-c6fc-27931317d165",
+			"name": "getUser code",
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/api/user?userId={{user_id_new}}",
+			"description": null,
+			"data": [],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{admin_access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "{{user_id_new}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "20fd7213-6562-4508-ae89-16ad1a2cf2f7",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);",
+							"if (tests[\"response code\"] !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "Authorization: Bearer {{admin_access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9b63be2b-fc21-4555-a311-e43e94f90775",
+			"name": "Get ChamberId",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "629ba74c-79e3-49c4-bf48-0e18a00a1699",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"postman.setEnvironmentVariable(\"chamber_id\", jsonData.data.chambers.edges[0].node.id);",
+							"postman.setEnvironmentVariable(\"chamber_name\", jsonData.data.chambers.edges[0].node.name);",
+							"",
+							"    ",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c7c6cf58-c79c-4912-a43a-2a50fb650b40",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"postman.setEnvironmentVariable(\"random\", random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query chamber{ chambers{   edges{node{id name description imageUrl}} }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9e36db5a-6995-4194-b7e2-9001094fdcd3",
+			"name": "Answer  to Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c0d19089-d179-469d-a89f-552e74c5f256",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);",
+							"",
+							"var text_random= pm.environment.get(\"text_random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f134f3c4-f666-4ca2-9d88-e4103367ca8b",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"I like vitamin water but I drink Fuji more these days,Don't know,Yes,No,Maybe,Big Mac - one love,Getting married to a,They rock,I wish I know,My boyfriend,Go to the beach,Coca cola,It's not me,Chinese food\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<1; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9ea8603f-a60d-4ce7-942d-00bf7157d2ed",
+			"name": "NEW QUESTION REACTION notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1b37a77a-7107-4016-8efd-6b7436842829",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"",
+							"postman.setEnvironmentVariable(\"notification_id\", jsonData.data.notificationsFeed.edges[0].node.id);",
+							"var chamber_id= pm.environment.get(\"chamber_id\");",
+							"var chamber_name= pm.environment.get(\"chamber_name\");",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 1;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 1;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"QuestionReactionNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === false;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === false;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"tests[\"chamber_id\"] = jsonData.data.notificationsFeed.edges[0].node.details.question.chamber.id === chamber_id;",
+							"tests[\"chamber_name\"] = jsonData.data.notificationsFeed.edges[0].node.details.question.chamber.name === chamber_name;",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "73fda81b-5e46-4edd-9ef1-a5cabf7ac05b",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 30000);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text     chamber{id name}       }          }                                                                                                                                                                      ... on QuestionReactionNotificationDetails {            question {              id              text     chamber{id name}      }            reactions {              type              count            }          }                                                                                                                                                                                                                           ... on AnswerReactionNotificationDetails {           answer {             id              text       question{chamber{id name}}    }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a80cc9ad-f05a-ba71-9ecf-f056bfb74aa3",
+			"name": "Verify user Email",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b6d94761-c266-41f2-bc94-ad8a63d19d53",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation { verifyCodeWithToken(code:{{emailCode}}){ isVerified }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a8fc0391-a839-4c34-bcb2-0b8b4e7ea3d9",
+			"name": "Get userId Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bfe8697e-bdd1-44e1-9447-d046c03979a8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if (tests[\"response code\"] !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query User { user {id }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "aaf0d73e-5507-4831-9caa-63759405f8c7",
+			"name": "IsRead=true notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c4956827-05be-4ba2-8640-1f230f1bdad2",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 0;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 0;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"NewAnswerNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === true;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === true;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ad4b491c-18e2-4ca8-a043-286f0303b218",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "aaf90ab8-b0df-41f7-8c74-252b10e17764",
+			"name": "Verify user Email Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b6d94761-c266-41f2-bc94-ad8a63d19d53",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation { verifyCodeWithToken(code:{{emailCode}}){ isVerified }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "acaff875-8001-41a2-c3e1-fea33b187ce4",
+			"name": "IsSeen=false notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "989743de-586b-4af3-ac64-a0251f23f818",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalCount\"] = jsonData.data.notificationsFeed.totalCount === 0;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 1;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 1;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"NewAnswerNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === false;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === false;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e5bb396c-f2ec-49d3-8cf9-e2f049c54fa7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ae794451-4687-46ce-87d6-30010cc05805",
+			"name": "NEXT Questions Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c635db69-32e1-495d-a41b-ff7035986c47",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.nextQuestions[0].id);",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\": \"query {nextQuestions(count: {{question_number}}){id text}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b1661f86-3a1f-26d6-79a3-e6aec88e1dce",
+			"name": "getUser code",
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/api/user?userId={{user_id}}",
+			"description": null,
+			"data": [],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{admin_access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "{{user_id}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "20fd7213-6562-4508-ae89-16ad1a2cf2f7",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);",
+							"if (tests[\"response code\"] !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "Authorization: Bearer {{admin_access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b2470be4-6f0a-4f83-a92f-55baa5158252",
+			"name": "READ ALL NOTIFICATION",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3d313342-c7fd-45ad-9f72-869efd9dec52",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"message\"] = jsonData.data.markAllNotificationsRead.message === \"All notifications successfully read.\";",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "03bce0d4-0c76-446a-9124-0e605198cc8c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation read { markAllNotificationsRead {    message  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b9398ce2-188e-4de7-ba02-9fa647996709",
+			"name": "isRead=true ALL",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6403ad04-363d-4394-945b-f3037c3a736f",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 0;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 0;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"AchievementNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === true;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === true;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"",
+							"tests[\"__typename2\"] = jsonData.data.notificationsFeed.edges[1].node.details.__typename === \"BalanceChangeNotificationDetails\";",
+							"tests[\"isSeen2\"] = jsonData.data.notificationsFeed.edges[1].node.isSeen === true;",
+							"tests[\"isRead2\"] = jsonData.data.notificationsFeed.edges[1].node.isRead === true;",
+							"tests[\"count2\"] = jsonData.data.notificationsFeed.edges[1].node.count === 1;",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1767a99b-2840-456f-9624-7da6335836f8",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 30000);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "\n{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c035160a-6167-d9f3-c18e-0dc919e0c3ec",
+			"name": "REACT on Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f657d83f-b95c-49c0-aa52-0ee88facc2ea",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"code\"] = jsonData.data.reactQuestion.code === 100011;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches message\"] = responseBody.has(\"Question successfully reacted with JOY.\");",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "005f815c-bae8-4b9f-adb4-082c645f4e81",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {reactQuestion(questionId: \\\"{{question_id}}\\\" reaction: JOY){    message    code  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ce8bfe8b-8b61-4cdb-a9a3-dc69de0b1ef8",
+			"name": "NEW ANSWER&REACTION notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d5323493-3a6d-4813-8713-0a1777459680",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"",
+							"var chamber_id= pm.environment.get(\"chamber_id\");",
+							"var chamber_name= pm.environment.get(\"chamber_name\");",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 2;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 2;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"QuestionReactionNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === false;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === false;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 2;",
+							"tests[\"chamber_id1\"] = jsonData.data.notificationsFeed.edges[0].node.details.question.chamber.id === chamber_id;",
+							"tests[\"chamber_name1\"] = jsonData.data.notificationsFeed.edges[0].node.details.question.chamber.name === chamber_name;",
+							"",
+							"tests[\"__typename2\"] = jsonData.data.notificationsFeed.edges[1].node.details.__typename === \"NewAnswerNotificationDetails\";",
+							"tests[\"isSeen2\"] = jsonData.data.notificationsFeed.edges[1].node.isSeen === false;",
+							"tests[\"isRead2\"] = jsonData.data.notificationsFeed.edges[1].node.isRead === false;",
+							"tests[\"count2\"] = jsonData.data.notificationsFeed.edges[1].node.count === 2;",
+							"",
+							"tests[\"chamber_id2\"] = jsonData.data.notificationsFeed.edges[1].node.details.question.chamber.id === chamber_id;;",
+							"tests[\"chamber_name2\"] = jsonData.data.notificationsFeed.edges[1].node.details.question.chamber.name === chamber_name;;",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1767a99b-2840-456f-9624-7da6335836f8",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 30000);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text     chamber{id name}       }          }                                                                                                                                                                      ... on QuestionReactionNotificationDetails {            question {              id              text     chamber{id name}      }            reactions {              type              count            }          }                                                                                                                                                                                                                           ... on AnswerReactionNotificationDetails {           answer {             id              text       question{chamber{id name}}    }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "d783c969-2810-4eaf-994f-172714bde348",
+			"name": "IsRead=true notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "151fd38d-6868-4b93-8ded-d3faad719f7a",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 0;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 0;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"QuestionReactionNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === true;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === true;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ad4b491c-18e2-4ca8-a043-286f0303b218",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "d882bfb0-cf52-df35-4bef-4369d6c5d058",
+			"name": "ADMIN Login",
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/login",
+			"description": null,
+			"data": [
+				{
+					"key": "emailOrPhone",
+					"value": "{{admin_email}}",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "{{admin_password}}",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1277a7c-3cc6-446e-849a-216caceb047f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e3a8353b-ffbe-4f75-aa56-329fc99f08bd",
+			"name": "isRead ALL notifications",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7160e6da-1231-486e-8941-4f49a95e168c",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 0;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 0;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"QuestionReactionNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === true;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === true;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 2;",
+							"",
+							"tests[\"__typename2\"] = jsonData.data.notificationsFeed.edges[1].node.details.__typename === \"NewAnswerNotificationDetails\";",
+							"tests[\"isSeen2\"] = jsonData.data.notificationsFeed.edges[1].node.isSeen === true;",
+							"tests[\"isRead2\"] = jsonData.data.notificationsFeed.edges[1].node.isRead === true;",
+							"tests[\"count2\"] = jsonData.data.notificationsFeed.edges[1].node.count === 2;",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9fddbfc4-4202-448d-bfb5-7d10c4b65dc1",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 30000);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "\n{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e95044a0-9a5d-76a0-8e07-67987038a813",
+			"name": "READ NOTIFICATION",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5d19fc29-7e60-4bfd-8c3f-089b940f61d8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"message\"] = jsonData.data.markNotificationRead.message === \"Notification successfully read.\";",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "03bce0d4-0c76-446a-9124-0e605198cc8c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation read { markNotificationRead(id: \\\"{{notification_id}}\\\") {    message  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f1a48738-2f87-e985-19ea-67a4c983b477",
+			"name": "Answer  to Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c0d19089-d179-469d-a89f-552e74c5f256",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);",
+							"",
+							"var text_random= pm.environment.get(\"text_random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f134f3c4-f666-4ca2-9d88-e4103367ca8b",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"I like vitamin water but I drink Fuji more these days,Don't know,Yes,No,Maybe,Big Mac - one love,Getting married to a,They rock,I wish I know,My boyfriend,Go to the beach,Coca cola,It's not me,Chinese food\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<1; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "faa8760a-aeb1-a6ed-4da4-b21e6b6e259c",
+			"name": "Update User Email",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_new}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4896bdc7-2550-4f0b-af5a-c009cc839b91",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var user_id = pm.environment.get(\"user_id\");",
+							"var email = pm.environment.get(\"email_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"email\"] = jsonData.data.updateUser.email === email;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							"if ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, email, gender, displayedId, birthday, state, avatar_id }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token_new}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "fb60f883-9b5e-482f-8bef-c439251e6587",
+			"name": "IsSeen=true notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9bca9670-2d15-439f-8f2e-33791870eeda",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"    ",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 0;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 1;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"AnswerReactionNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === true;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === false;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c35fdb89-8165-4730-956a-233ec237a469",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "\n{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "fc410d13-3cbb-0eda-1fde-4b0c8eded869",
+			"name": "Get user id",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "30a28d03-8983-44f8-a788-296a481407b4",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user_id_new\", jsonData.data.user.id);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if (tests[\"response code\"] !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query User { user {id }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ff8c7cde-33db-ff77-49b3-305170ba3084",
+			"name": "IsSeen=true notification center",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d9b0fe84-b337-4bab-8c0d-0b8057500fdf",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"totalUnseenCount\"] = jsonData.data.notificationsFeed.totalUnseenCount === 0;",
+							"tests[\"totalUnreadCount\"] = jsonData.data.notificationsFeed.totalUnreadCount === 1;",
+							"tests[\"__typename\"] = jsonData.data.notificationsFeed.edges[0].node.details.__typename === \"QuestionReactionNotificationDetails\";",
+							"tests[\"isSeen\"] = jsonData.data.notificationsFeed.edges[0].node.isSeen === true;",
+							"tests[\"isRead\"] = jsonData.data.notificationsFeed.edges[0].node.isRead === false;",
+							"tests[\"count\"] = jsonData.data.notificationsFeed.edges[0].node.count === 1;",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d459b72c-51ae-4dff-a381-91bf13b2491f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query notificationsFeed {  notificationsFeed{    edges {      node {        id        title        message        redirect {          url          description        }        count        lastUpdatedAt        isSeen        isRead        details {          __typename          ... on NewAnswerNotificationDetails {            question {              id              text            }          }                                                                                                                                                                                                 ... on QuestionReactionNotificationDetails {            question {              id              text           }            reactions {              type              count            }          }                                                                                                                                                                    ... on AnswerReactionNotificationDetails {           answer {             id              text            }            reactions {              type              count            }          }                                                                                                                                                            ... on AchievementNotificationDetails {            achievement {              isNew              id              name              seen              read              reward              records {                achievedAt                redirect {                  url                  description               }              }           }    }                                                                                                                                     ... on BalanceChangeNotificationDetails {          points           date         }       }     }   }   totalCount    totalUnseenCount    totalUnreadCount    pageInfo {     hasNextPage      hasPreviousPage    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		}
+	]
+}

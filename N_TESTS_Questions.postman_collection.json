@@ -1,0 +1,4620 @@
+{
+	"id": "e487995a-51b0-4a6f-b12d-9f311128a883",
+	"name": "N_TESTS_Questions",
+	"description": null,
+	"auth": null,
+	"events": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3d6c28e0-d1eb-4d5e-9f11-197bcac5bffb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "858d10b4-1304-44e5-89d3-d9efa91367e3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variables": null,
+	"order": [
+		"b030f18a-d0eb-4cdb-a0d5-5ab713eb906f",
+		"89ce8e96-ba7e-4c7b-b154-40e666af0116",
+		"502599ca-98c1-4568-a733-dae3fee712ac",
+		"741bbc30-943d-40dd-97c2-902802f7cf63",
+		"35269852-b9ff-492b-b088-3b85806ec26d",
+		"3c7177cc-9c8f-4622-bd62-cb5a5f799190",
+		"4d5e46fb-15d2-498b-9a0e-8ded17b863e0",
+		"5366107f-e28b-452b-aed8-154143a1de6b",
+		"64de7b15-2323-4c6a-9157-f58cd8319352",
+		"05971a40-fa93-4554-9861-ef482dd3eeea",
+		"d3793d89-4234-4416-a082-fc5ae8f51fd3",
+		"37a7a8d4-e877-4d1d-9a81-63147d9834d8",
+		"59a4924e-1b52-4451-b4b3-42ffed8a4b78",
+		"752eb8c8-02bf-4058-b82c-91d062a506c0",
+		"e30480d3-c5be-4d51-a5ce-024012ee1c00",
+		"ba9eebb7-6aa2-4775-bd44-76e4a3d5e083",
+		"1a90863b-4b72-4516-ae81-9b621039382b",
+		"ff5b7834-30ce-4b31-aa0d-26edb232b2a0",
+		"ebe27bdc-ae25-4f4d-a30d-491678594d2c",
+		"4a9414f6-72c5-4328-bd36-065b71a997b3",
+		"0fc067d2-f417-4a9c-8673-a18477351bde",
+		"17ede9d9-fcec-41a6-9bb5-4caf90cf47a5",
+		"b28e9c65-ab3f-45aa-a0c3-b2e3db959522",
+		"3b9fffa2-33a8-435c-9426-a84f7a033768",
+		"c9202d17-61c6-447d-b59f-6ac4d320dac4",
+		"ca05f349-0366-40ab-9ead-40131690eb86",
+		"63f404e9-9b01-476e-8c1e-1b7391b06470",
+		"1003bd07-7526-4d9e-882f-b1e31cf845ac",
+		"006b6680-958b-4894-8eba-c698e4d391aa",
+		"971e0757-ebce-41c6-9083-6086eb2df2d0",
+		"86308d88-d4d4-4dd6-8f01-b3408e74cdc3",
+		"0a3c67e8-4f51-4102-b454-08b3b6a7abe3",
+		"3f5cadd7-75b2-4dc9-bfe3-66b2138f6697",
+		"80d5d06d-c256-4ab6-97ac-0c47862c63d6",
+		"fc8f99c3-fc86-48df-9172-4af022968176",
+		"4219bd68-7819-4dd2-9652-34533ad1b15b",
+		"389c22ba-8f2c-4fbf-8f09-3c9c321a1b96",
+		"8bba6a33-f6fe-44d1-8a40-70e2fef9a9e6",
+		"4e6e71bf-1d97-4e88-bb67-a8a9b321a220",
+		"c365533e-2baf-4e03-be1c-1d4f730ff459",
+		"0812b33c-f486-4482-83d1-684cff4b6e47",
+		"804ad2bf-751a-433c-9f1a-edba0f257945",
+		"c254bd13-87bb-40f6-b758-cc45916bebfb",
+		"fc9b2805-d308-4f47-95f1-04e4bd7af668",
+		"33edc24d-4481-4084-8098-0adf03667fd6",
+		"404d134f-6a48-4e18-8c5a-bf9431193b7c",
+		"21b7da4d-284c-4a3d-b4ae-b8ca9a75ef44",
+		"025f464e-e243-48ae-ba31-1bc51d010109",
+		"f030b06f-4117-414f-9f33-96e1a0cb892b",
+		"b11f19c4-7ce6-43e3-98dd-cbb4bc6bef53",
+		"4cd008c1-7356-4733-8594-60c5ae18bc7f",
+		"ff98a652-5416-4aa1-b393-f1d5ef5b0ea4",
+		"4fb9e8cc-bab0-4a41-8ce1-558e04427ffe",
+		"cbc8ec34-e41c-49c6-84b3-fceb4bf5e7e8",
+		"e99d6e86-33d5-40fd-ad2a-47d5cd7250e9",
+		"1eb76a34-d33c-4405-916d-73373aed79f2",
+		"1c4cc01e-8dba-4b8c-9678-1eefbf1a45d8",
+		"a284430d-8d71-46c1-971d-31407ef99e8e",
+		"e8362c80-29cf-4a0c-8e71-a345babc4f52",
+		"ff22d2d7-2321-439a-9291-b7fe958d0253",
+		"71761b0e-7008-4b19-8654-ce238d422cda",
+		"101132fb-4503-434e-8658-feceef66a844",
+		"1a6cf268-0ab1-45bd-bb47-2a8114a6eafd",
+		"b6492519-6249-4378-9f8e-e4008af13280",
+		"19f93dc3-d43d-4844-bf51-77a8b82b5b4b",
+		"cecf53b2-aa64-4b2d-83b5-e97a39efffd0",
+		"362be5cb-8d39-48f9-994f-78c633a02560",
+		"35eacbc4-1bf5-40a7-a941-03fd53ea00dd",
+		"60b9b16d-85bc-407e-8aea-ad6b9f390da6",
+		"39a6ded5-c79a-468a-8e91-712e097fe6a2",
+		"51cb1009-1d06-4a24-88e2-2eccbb84f089",
+		"8aa60d79-a5d7-459c-9a6c-8c6d4731638e",
+		"fdcf5857-9420-4516-be3e-299c7050a27f",
+		"c05342e8-0160-4760-a3ac-9034dcd3de14",
+		"d3479111-938d-444f-8d2a-7449e94606c7",
+		"c703f5b6-b426-4680-a3c3-00c06ffbbc34",
+		"2a223fd4-39c7-44f6-9fa6-1e3ffd5b2e9f",
+		"40c8ea7c-bcc7-4b46-9c93-7fb942a1e6a4",
+		"6ba4c8fc-bcc2-4b2b-99e5-4cd3cd99372c"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "006b6680-958b-4894-8eba-c698e4d391aa",
+			"name": "User cabinet",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c44c7b4e-b0fe-4d45-93e4-c19306653c76",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							" console.log( \"response body: \" ,  responseBody)",
+							" console.log(\"request: \" ,  request)",
+							"    ",
+							"    ",
+							"",
+							"tests[\"code\"] = responseCode.code === 200;",
+							"tests[\"askedQuestionsCount\"] = jsonData.data.user.askedQuestionsCount.totalCount === 2;",
+							"tests[\"answeredQuestionsCount\"] = jsonData.data.user.answeredQuestionsCount.totalCount === 0;",
+							"tests[\"viewedQuestionsCount\"] = jsonData.data.user.viewedQuestionsCount.totalCount === 1;",
+							"tests[\"answerReactions\"] = jsonData.data.user.answerReactions.totalCount === 0;",
+							"tests[\"questionReactions\"] = jsonData.data.user.questionReactions.totalCount === 1;",
+							"tests[\"askedTodayQuestions\"] = jsonData.data.user.askedTodayQuestions.totalCount === 2;",
+							"",
+							"",
+							"   ",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query UserCabinetStatistics {  user {    askedQuestionsCount: questions(filter: {types:[ASKED]}) {     totalCount     }                                                                                                                                                               answeredQuestionsCount: questions(filter: {types:[ANSWERED]}) {     totalCount    }                                                                                                           viewedQuestionsCount: questions(filter: {types:[VIEWED]}) {    totalCount    }                                                                                                                  answerReactions {     totalCount   }                                                                                                                                                                questionReactions {      totalCount    }                                                                                                                                                    askQuestionsDailyLimit    askedTodayQuestions: questions(filter: {types:[ASKED], createdAt: {ge: {{time}}}}) {      totalCount    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "025f464e-e243-48ae-ba31-1bc51d010109",
+			"name": "Check answer REACTION (viewAnswers)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8d0f4c44-07df-4caf-abdc-7253c38ec9fb",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"",
+							"var answer_id = pm.environment.get(\"answer_id\");",
+							"",
+							"tests[\"myReaction\"] = responseBody.has(\"myReaction\");",
+							"tests[\"answer_id\"] = jsonData.data.viewAnswers.edges[0].node.id === answer_id;",
+							"tests[\"myReaction_text\"] = jsonData.data.viewAnswers.edges[0].node.myReaction === \"SURPRISE\";",
+							"tests[\"answers_reaction\"] = jsonData.data.viewAnswers.edges[0].node.reactions[0].type === \"SURPRISE\";",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query {  viewAnswers(questionId: \\\"{{question_id}}\\\" ){    edges{     node{       id       text              myReaction       reactions{       type       count     }  } }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "05971a40-fa93-4554-9861-ef482dd3eeea",
+			"name": "Search in questions all lists",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a64b9f85-8ba2-450c-83ca-04f012867d75",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_id\"] = jsonData.data.searchInQuestions.edges[0].node.id === question_id;",
+							"(tests[\"chamber_id\"] = jsonData.data.searchInQuestions.edges[0].node.chamber.id) === chamber_id;",
+							"console.log(postman.get);",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0d9cf705-2e2f-48af-b1ac-e11b1dd12bcc",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 10000);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query SearchInQuestions {  searchInQuestions(text: \\\"How\\\", filter: {types: [ASKED, ANSWERED, REACTED, VIEWED]}) {    edges {     node { chamber{id}       id        text        totalAnswers        newAnswersCount      }    }    totalCount    totalNewAnswersCount  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0812b33c-f486-4482-83d1-684cff4b6e47",
+			"name": "Update User Email Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4896bdc7-2550-4f0b-af5a-c009cc839b91",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var user_id = pm.environment.get(\"user_id\");",
+							"var email = pm.environment.get(\"email_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"email\"] = jsonData.data.updateUser.email === email;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							"if ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, email, gender, displayedId, birthday, state, avatar_id }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0a3c67e8-4f51-4102-b454-08b3b6a7abe3",
+			"name": "Check user REACTION(question)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "080796d2-90bf-46d0-bab4-ce53c4ed40f9",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_reaction\"] = responseBody.has(\"questionReactions\");",
+							"tests[\"answer_reaction\"] = responseBody.has(\"answerReactions\");",
+							"",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"",
+							"",
+							"tests[\"question_id\"] = responseBody.has(question_id);",
+							"tests[\"question_id\"] = jsonData.data.user.questionReactions.edges[0].node.reaction == \"JOY\";",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query {  user{    id    email    questionReactions{      edges{       cursor        node{          questionId          reaction          reactedAt        }      }    }    answerReactions{      edges{        node{          answerId         reaction       }      }    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0fc067d2-f417-4a9c-8673-a18477351bde",
+			"name": "Select Question ASKED one list",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7cec2fbe-2ba9-4b39-9019-d8acb180b4b7",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_text = pm.environment.get(\"question_text\");",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.asked.edges[0].node.isAnswered === false;",
+							"tests[\"question_text\"] = jsonData.data.asked.edges[0].node.text === question_text;",
+							"tests[\"question_id\"] = jsonData.data.asked.edges[0].node.id === question_id;",
+							"tests[\"chamber_id1\"] = jsonData.data.asked.edges[0].node.chamber.id === chamber_id;",
+							"tests[\"chamber_id2\"] = jsonData.data.asked.edges[1].node.chamber.id === \"themind_chamber\";",
+							"",
+							"tests[\"total_count\"] = jsonData.data.asked.totalCount === 2;",
+							"tests[\"total_answers\"] = jsonData.data.asked.edges[0].node.totalAnswers === 0;",
+							"",
+							"",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"question_text\"] && tests[\"total_answers\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"query\" : \"query MyMind { asked: questions(type: ASKED order:{field:ANSWER sort:ASC}) {    totalNewAnswersCount    totalCount        edges {     node {chamber{id}        text        id              newAnswersCount lastAnswered createdAt totalAnswers isAnswered}    }  }                                                                                                                                                                                                                answered: questions(type: ANSWERED) {    totalNewAnswersCount     totalCount      edges {    node {        text        id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered}}  }                                                                                                                                                                     reacted: questions(type: REACTED) {    totalNewAnswersCount     totalCount          edges {    node {       text        id        newAnswersCount lastAnswered createdAt totalAnswers  isAnswered  }}  }                                                                                                                                                        viewed: questions(type: VIEWED) {    totalNewAnswersCount     totalCount      edges {  node {    text    id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered    }}  }                                                                                                                                                                  flagged: questions(type: FLAGGED) {   totalNewAnswersCount     totalCount       edges {  node {    text    id   newAnswersCount lastAnswered createdAt totalAnswers   isAnswered   }}  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "1003bd07-7526-4d9e-882f-b1e31cf845ac",
+			"name": "REACT on Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f657d83f-b95c-49c0-aa52-0ee88facc2ea",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"code\"] = jsonData.data.reactQuestion.code === 100011;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches message\"] = responseBody.has(\"Question successfully reacted with JOY.\");",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "005f815c-bae8-4b9f-adb4-082c645f4e81",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {reactQuestion(questionId: \\\"{{question_id}}\\\" reaction: JOY){    message    code  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "101132fb-4503-434e-8658-feceef66a844",
+			"name": "Select Question FLAGGED one list",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0be205ea-78ea-4fb9-92bc-d3f062ffb4b6",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_text = pm.environment.get(\"question_text\");",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.flagged.edges[0].node.isAnswered === true;",
+							"tests[\"question_id\"] = jsonData.data.flagged.edges[0].node.id === question_id;",
+							"tests[\"total_count\"] = jsonData.data.flagged.totalCount === 1;",
+							"",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"question_text\"] && tests[\"total_answers\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"query\" : \"query MyMind { asked: questions(type: ASKED order:{field:ANSWER sort:ASC}) {    totalNewAnswersCount    totalCount        edges {     node {        text        id              newAnswersCount lastAnswered createdAt totalAnswers isAnswered}    }  }                                                                                                                                                                                                                answered: questions(type: ANSWERED) {    totalNewAnswersCount     totalCount      edges {    node {        text        id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered}}  }                                                                                                                                                                     reacted: questions(type: REACTED) {    totalNewAnswersCount     totalCount          edges {    node {       text        id        newAnswersCount lastAnswered createdAt totalAnswers  isAnswered  }}  }                                                                                                                                                        viewed: questions(type: VIEWED) {    totalNewAnswersCount     totalCount      edges {  node {    text    id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered    }}  }                                                                                                                                                                  flagged: questions(type: FLAGGED) {   totalNewAnswersCount     totalCount       edges {  node {    text    id   newAnswersCount lastAnswered createdAt totalAnswers   isAnswered   }}  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "17ede9d9-fcec-41a6-9bb5-4caf90cf47a5",
+			"name": "View  to Question (statistics)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bfbf3698-2dd8-4db4-b49e-73d274f0d9f7",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"tags\"] = responseBody.has(\"tags\")",
+							"tests[\"bubbles\"] = responseBody.has(\"bubbles\")",
+							"tests[\"statistics\"] = responseBody.has(\"statistics\")",
+							"tests[\"name\"] = responseBody.has(\"name\")",
+							"tests[\"weight\"] = responseBody.has(\"weight\")",
+							"tests[\"tag\"] = responseBody.has(\"tag\")",
+							"tests[\"entries\"] = responseBody.has(\"entries\")",
+							"tests[\"pct\"] = responseBody.has(\"pct\")",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d0f4832c-21eb-4b9a-94e0-f4e0b82105ca",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"Apple ,Samsung ,Coffe ,friend ,milk ,Dima ,Alina ,iPad ,Basilur ,KFC ,PlayStation ,Love ,USA ,CANADA ,freindship ,mother ,Tesla ,Amazon ,Netflix ,Incyte ,Naver ,Asian Paints ,Adobe Systems ,Autodesk ,Illumina , Don't know ,Yes ,No ,maybe ,Apricot ,Avocado ,Banana ,Bilberry ,Blackberry ,Blackcurrant ,Blueberry ,Boysenberry ,Buddha's hand (fingered citron) ,Crab apples ,Currant ,Cherry ,Cherimoya ,Chico fruit ,Cloudberry ,Coconut ,Cranberry ,Cucumber ,Custard apple ,Lost Tree ,The Cotton Tree ,Drago Milenario ,Cypress of Abarkuh ,Los Angeles ,San Luis Obispo ,Kings ,Banning ,\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<5; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"  if (i<wordCount-1)",
+							"    text_random += \" \";",
+							"  else",
+							"    text_random += \".\";",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query { statistics(questionId: \\\"{{admin_question_id}}\\\" ){  tags{    name     weight   }    bubbles{      tag     entries      pct    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "19f93dc3-d43d-4844-bf51-77a8b82b5b4b",
+			"name": "View flagged Answers",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1677e848-84a7-440b-8a33-0c23eaf411e1",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"",
+							"var answer_id = pm.environment.get(\"answer_id\");",
+							"",
+							"tests[\"answer_id\"] = jsonData.data.viewAnswers.edges[0].node.id === answer_id;",
+							"tests[\"flagged\"] = jsonData.data.viewAnswers.edges[0].node.isFlagged === true;",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query {  viewAnswers(questionId: \\\"{{question_id}}\\\" ){    edges{     node{       id       text       isFlagged       myReaction       reactions{       type       count     }  } }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "1a6cf268-0ab1-45bd-bb47-2a8114a6eafd",
+			"name": "Flag answer",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1f57917c-9d40-4117-844f-5c1ae0128b43",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"]  ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"tests[\"message\"] = jsonData.data.flagAnswer.message === \"Answer successfully flagged.\";"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation  {flagAnswer (answerId:\\\"{{answer_id}}\\\", reason: SPAM_SALES){ message }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "1a90863b-4b72-4516-ae81-9b621039382b",
+			"name": "Search in questions all lists(only ANSWERED list) EMPTY Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1e737fcb-01f2-4d49-8d54-2777af7055a6",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_id\"] = jsonData.data.searchInQuestions.edges.isEmpty();",
+							"",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f4342168-3d34-4589-8ba2-8b0ceea6c451",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query SearchInQuestions {  searchInQuestions(text: \\\"How?\\\", filter: {types: [ANSWERED]}) {    edges {     node {        id        text        totalAnswers        newAnswersCount      }    }    totalCount    totalNewAnswersCount  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "1c4cc01e-8dba-4b8c-9678-1eefbf1a45d8",
+			"name": "NEXT Questions in Chamber",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d8641747-530e-49c1-bb09-07d599d61b66",
+						"type": "text/javascript",
+						"exec": [
+							"var  question_number = pm.environment.get(\"question_number\");",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.nextQuestions[0].id);",
+							"",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"tests[\"chamber_id\"] = jsonData.data.nextQuestions[0].chamber.id === chamber_id;",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\": \"query {nextQuestions(count: {{question_number}}, chamberId:\\\"{{chamber_id}}\\\"){chamber{id name} id text}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "1eb76a34-d33c-4405-916d-73373aed79f2",
+			"name": "Answer  to Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fcbfc9e1-e76c-4dd8-b24f-5f3027794df8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);",
+							"",
+							"var text_random= pm.environment.get(\"text_random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"tests[\"chamber_id\"] = jsonData.data.answerQuestion.question.chamber.id === \"themind_chamber\";",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5f1f2ca4-7c0a-469e-a870-35e1aef76956",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"I like vitamin water but I drink Fuji more these days,Don't know,Yes,No,Maybe,Big Mac - one love,Getting married to a,They rock,I wish I know,My boyfriend,Go to the beach,Coca cola,It's not me,Chinese food\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<1; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text question{ chamber{id}}}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "21b7da4d-284c-4a3d-b4ae-b8ca9a75ef44",
+			"name": "Check user REACTION (answer)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98baed70-9c28-4c95-a349-d13637f62b2c",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_reaction\"] = responseBody.has(\"questionReactions\");",
+							"tests[\"answer_reaction\"] = responseBody.has(\"answerReactions\");",
+							"",
+							"var answer_id = pm.environment.get(\"answer_id\");",
+							"",
+							"",
+							"tests[\"answer_id\"] = responseBody.has(answer_id);",
+							"tests[\"answer_reaction\"] = jsonData.data.user.answerReactions.edges[0].node.reaction == \"SURPRISE\";",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query {  user{    id    email    questionReactions{      edges{       cursor        node{          questionId          reaction          reactedAt        }      }    }    answerReactions{      edges{        node{          answerId         reaction       }      }    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "2a223fd4-39c7-44f6-9fa6-1e3ffd5b2e9f",
+			"name": "ASK Question 2 for CreatedAt field",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "77acc3c3-0571-4180-98e5-510d21baad03",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.askQuestion.id);",
+							"var createdAt = pm.environment.get(\"createdAt\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"id\");",
+							"tests[\"createdAtTest\"] = createdAt != jsonData.data.askQuestion.createdAt;",
+							"pm.environment.get(\"variable_key\");",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"(tests[\"chamber_id\"] = jsonData.data.askQuestion.chamber.id) === chamber_id;",
+							"if ((tests[\"response code\"] &&  tests[\"Body matches string\"] && tests[\"createdAtTest\"]  ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c7c6cf58-c79c-4912-a43a-2a50fb650b40",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"postman.setEnvironmentVariable(\"random\", random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation ask{askQuestion (text:\\\"What is it? {{random}}\\\",chamberId:\\\"{{chamber_id}}\\\"){chamber{id} id text createdAt}  }\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "33edc24d-4481-4084-8098-0adf03667fd6",
+			"name": "REACT on Answer",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "112284cb-b081-4d5d-b47d-3c6388c3a637",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"var text_random= pm.environment.get(\"text_random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"message_text\"] = responseBody.has(\"Answer successfully reacted with SURPRISE\");",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d0f4832c-21eb-4b9a-94e0-f4e0b82105ca",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"Apple ,Samsung ,Coffe ,friend ,milk ,Dima ,Alina ,iPad ,Basilur ,KFC ,PlayStation ,Love ,USA ,CANADA ,freindship ,mother ,Tesla ,Amazon ,Netflix ,Incyte ,Naver ,Asian Paints ,Adobe Systems ,Autodesk ,Illumina , Don't know ,Yes ,No ,maybe ,Apricot ,Avocado ,Banana ,Bilberry ,Blackberry ,Blackcurrant ,Blueberry ,Boysenberry ,Buddha's hand (fingered citron) ,Crab apples ,Currant ,Cherry ,Cherimoya ,Chico fruit ,Cloudberry ,Coconut ,Cranberry ,Cucumber ,Custard apple ,Lost Tree ,The Cotton Tree ,Drago Milenario ,Cypress of Abarkuh ,Los Angeles ,San Luis Obispo ,Kings ,Banning ,\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<5; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"  if (i<wordCount-1)",
+							"    text_random += \" \";",
+							"  else",
+							"    text_random += \".\";",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {reactAnswer(answerId: \\\"{{answer_id}}\\\" reaction: SURPRISE){    message    code  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "35269852-b9ff-492b-b088-3b85806ec26d",
+			"name": "Verify user Email",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b6d94761-c266-41f2-bc94-ad8a63d19d53",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation { verifyCodeWithToken(code:{{emailCode}}){ isVerified }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "35eacbc4-1bf5-40a7-a941-03fd53ea00dd",
+			"name": "Skip Question ERROR OWN",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "975ee449-2996-483f-a26e-7f83f0f50471",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"code\"] = jsonData.errors[0].errorCode === 400032;",
+							"tests[\"message\"] = responseBody.has(\"Cannot skip own question\");",
+							"",
+							"",
+							"if ((tests[\"response code\"] && tests[\"code\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {skipQuestion(questionId:\\\"{{question_id}}\\\") {message code}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "362be5cb-8d39-48f9-994f-78c633a02560",
+			"name": "ASK Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0589c6bb-94aa-4a9e-83f2-65545fa19d04",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.askQuestion.id);",
+							"postman.setEnvironmentVariable(\"question_text\", jsonData.data.askQuestion.text);",
+							"postman.setEnvironmentVariable(\"createdAt\", jsonData.data.askQuestion.createdAt);",
+							"",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"(tests[\"chamber_id\"] = jsonData.data.askQuestion.chamber.id) === chamber_id;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"id\");",
+							"if ((tests[\"response code\"] && tests[\"Body matches string\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c7c6cf58-c79c-4912-a43a-2a50fb650b40",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"postman.setEnvironmentVariable(\"random\", random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {askQuestion(chamberId:\\\"{{chamber_id}}\\\", text: \\\"What is it? {{random}}\\\") {id text chamber{id}}}\"\n}\n",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "37a7a8d4-e877-4d1d-9a81-63147d9834d8",
+			"name": "Search in questions all lists(only ANSWERED list) EMPTY",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1e737fcb-01f2-4d49-8d54-2777af7055a6",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_id\"] = jsonData.data.searchInQuestions.edges.isEmpty();",
+							"",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f4342168-3d34-4589-8ba2-8b0ceea6c451",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query SearchInQuestions {  searchInQuestions(text: \\\"How?\\\", filter: {types: [ANSWERED]}) {    edges {     node {        id        text        totalAnswers        newAnswersCount      }    }    totalCount    totalNewAnswersCount  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "389c22ba-8f2c-4fbf-8f09-3c9c321a1b96",
+			"name": "SignIUp with email Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e7c66392-c137-4e60-988f-1b2470c05a52",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "64bc80aa-aeb2-47db-89d3-86c2189eab4e",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"email_random = \"sandbxtest8+\" + random + \"@gmail.com\"",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"email_random\", email_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "39a6ded5-c79a-468a-8e91-712e097fe6a2",
+			"name": "Flag Question ERROR OWN",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8fc80cd6-99ee-4aa2-aa81-1db53732fd11",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"]  ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"tests[\"message\"] = responseBody.has(\"Cannot flag asked question\");",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation  {flagQuestion (questionId:\\\"{{question_id}}\\\", reason: SPAM_SALES){ message }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3b9fffa2-33a8-435c-9426-a84f7a033768",
+			"name": "Select Question ASKED one list",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "50f6a287-adbb-4440-8c1a-fa80419da2d0",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_text = pm.environment.get(\"question_text\");",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.asked.edges[0].node.isAnswered === false;",
+							"tests[\"question_text\"] = jsonData.data.asked.edges[0].node.text === question_text;",
+							"tests[\"question_id\"] = jsonData.data.asked.edges[0].node.id === question_id;",
+							"tests[\"total_count\"] = jsonData.data.asked.totalCount === 2;",
+							"tests[\"total_answers\"] = jsonData.data.asked.edges[0].node.totalAnswers === 0;",
+							"",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"question_text\"] && tests[\"total_answers\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"query\" : \"query MyMind { asked: questions(type: ASKED order:{field:ANSWER sort:ASC}) {    totalNewAnswersCount    totalCount        edges {     node {        text        id              newAnswersCount lastAnswered createdAt totalAnswers isAnswered}    }  }                                                                                                                                                                                                                answered: questions(type: ANSWERED) {    totalNewAnswersCount     totalCount      edges {    node {        text        id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered}}  }                                                                                                                                                                     reacted: questions(type: REACTED) {    totalNewAnswersCount     totalCount          edges {    node {       text        id        newAnswersCount lastAnswered createdAt totalAnswers  isAnswered  }}  }                                                                                                                                                        viewed: questions(type: VIEWED) {    totalNewAnswersCount     totalCount      edges {  node {    text    id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered    }}  }                                                                                                                                                                  flagged: questions(type: FLAGGED) {   totalNewAnswersCount     totalCount       edges {  node {    text    id   newAnswersCount lastAnswered createdAt totalAnswers   isAnswered   }}  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3c7177cc-9c8f-4622-bd62-cb5a5f799190",
+			"name": "Update User Email",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4896bdc7-2550-4f0b-af5a-c009cc839b91",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var user_id = pm.environment.get(\"user_id\");",
+							"var email = pm.environment.get(\"email_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"email\"] = jsonData.data.updateUser.email === email;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							"if ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, email, gender, displayedId, birthday, state, avatar_id }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3f5cadd7-75b2-4dc9-bfe3-66b2138f6697",
+			"name": "Check question REACTION (questions)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f46ea756-1ed4-4dd0-90c4-891371fba518",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"var answer_id = pm.environment.get(\"answer_id\");",
+							"",
+							"tests[\"reaction\"] = responseBody.has(\"myReaction\");",
+							"tests[\"question_id\"] = responseBody.has(question_id);",
+							"tests[\"reactions\"] = responseBody.has(\"JOY\");",
+							"",
+							"tests[\"myReaction\"] = jsonData.data.questions.edges[0].node.myReaction === \"JOY\";",
+							"tests[\"question_reaction\"] = jsonData.data.questions.edges[0].node.reactions[0].type === \"JOY\";",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query {  questions(type:  ASKED ){   edges{      node{        id        text        myAnswer {          id        }        reactions{         type         count       }       myReaction    }   } }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "404d134f-6a48-4e18-8c5a-bf9431193b7c",
+			"name": "User cabinet",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "83a459c6-7502-4e13-8b40-aff105eb7e12",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							" console.log( \"response body: \" ,  responseBody)",
+							" console.log(\"request: \" ,  request)",
+							"    ",
+							"    ",
+							"",
+							"tests[\"code\"] = responseCode.code === 200;",
+							"tests[\"askedQuestionsCount\"] = jsonData.data.user.askedQuestionsCount.totalCount === 0;",
+							"tests[\"answeredQuestionsCount\"] = jsonData.data.user.answeredQuestionsCount.totalCount === 1;",
+							"tests[\"viewedQuestionsCount\"] = jsonData.data.user.viewedQuestionsCount.totalCount === 0;",
+							"tests[\"answerReactions\"] = jsonData.data.user.answerReactions.totalCount === 1;",
+							"tests[\"questionReactions\"] = jsonData.data.user.questionReactions.totalCount === 0;",
+							"tests[\"askedTodayQuestions\"] = jsonData.data.user.askedTodayQuestions.totalCount === 0;",
+							"",
+							"",
+							"   ",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query UserCabinetStatistics {  user {    askedQuestionsCount: questions(filter: {types:[ASKED]}) {     totalCount     }                                                                                                                                                               answeredQuestionsCount: questions(filter: {types:[ANSWERED]}) {     totalCount    }                                                                                                           viewedQuestionsCount: questions(filter: {types:[VIEWED]}) {    totalCount    }                                                                                                                  answerReactions {     totalCount   }                                                                                                                                                                questionReactions {      totalCount    }                                                                                                                                                    askQuestionsDailyLimit    askedTodayQuestions: questions(filter: {types:[ASKED], createdAt: {ge: {{time}}}}) {      totalCount    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "40c8ea7c-bcc7-4b46-9c93-7fb942a1e6a4",
+			"name": "Answer  Anonymously",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"enabled": false
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "675a9bbb-fc88-4559-b094-25283681f76d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var text_random= pm.environment.get(\"text_random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.answerAnonymously.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2699e057-a3ee-4513-b0ae-6f8a0d1429eb",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"I like vitamin water but I drink Fuji more these days,Don't know,Yes,No,Maybe,Big Mac - one love,Getting married to a,They rock,I wish I know,My boyfriend,Go to the beach,Coca cola,It's not me,Chinese food\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<1; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation { answerAnonymously(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text }}\"\n}",
+			"headers": "Content-Type: application/json\n//Authorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4219bd68-7819-4dd2-9652-34533ad1b15b",
+			"name": "Check user REACTION(EMPTY)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "24a35b4d-3b45-41ac-95ac-ce05c4204c73",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_reaction\"] = responseBody.has(\"questionReactions\");",
+							"tests[\"answer_reaction\"] = responseBody.has(\"answerReactions\");",
+							"",
+							"",
+							"tests[\"question_id\"] = jsonData.data.user.questionReactions.edges.isEmpty();",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query {  user{    id    email    questionReactions{      edges{       cursor        node{          questionId          reaction          reactedAt        }      }    }    answerReactions{      edges{        node{          answerId         reaction       }      }    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4a9414f6-72c5-4328-bd36-065b71a997b3",
+			"name": "ASK Question (500 symbols)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d805b9ef-e0ed-497f-8dec-bb3dc9ab7e6a",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var answer = postman.getEnvironmentVariable(\"big_answer\");",
+							"tests[\"error_code\"] = jsonData.errors[0].errorCode === 400016;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"error_code\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation ask{askQuestion (text:\\\"{{big_answer}} \\\"){id text text createdAt}  }\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4cd008c1-7356-4733-8594-60c5ae18bc7f",
+			"name": "Check user REACTION (EMPTY)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc9a8b2e-9779-436b-b604-5b357c6057a5",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_reaction\"] = responseBody.has(\"questionReactions\");",
+							"tests[\"answer_reaction\"] = responseBody.has(\"answerReactions\");",
+							"",
+							"",
+							"tests[\"answer_reaction\"] = jsonData.data.user.answerReactions.edges.isEmpty();",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query {  user{    id    email    questionReactions{      edges{       cursor        node{          questionId          reaction          reactedAt        }      }    }    answerReactions{      edges{        node{          answerId         reaction       }      }    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4d5e46fb-15d2-498b-9a0e-8ded17b863e0",
+			"name": "User cabinet (Empty)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bfcca738-02c6-4806-b093-6436ee86214d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							" console.log( \"response body: \" ,  responseBody)",
+							" console.log(\"request: \" ,  request)",
+							"    ",
+							"    ",
+							"",
+							"tests[\"code\"] = responseCode.code === 200;",
+							"tests[\"askedQuestionsCount\"] = jsonData.data.user.askedQuestionsCount.totalCount === 0;",
+							"tests[\"answeredQuestionsCount\"] = jsonData.data.user.answeredQuestionsCount.totalCount === 0;",
+							"tests[\"viewedQuestionsCount\"] = jsonData.data.user.viewedQuestionsCount.totalCount === 0;",
+							"tests[\"answerReactions\"] = jsonData.data.user.answerReactions.totalCount === 0;",
+							"tests[\"questionReactions\"] = jsonData.data.user.questionReactions.totalCount === 0;",
+							"tests[\"askedTodayQuestions\"] = jsonData.data.user.askedTodayQuestions.totalCount === 0;",
+							"",
+							"",
+							"   ",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query UserCabinetStatistics {  user {    askedQuestionsCount: questions(filter: {types:[ASKED]}) {     totalCount     }                                                                                                                                                               answeredQuestionsCount: questions(filter: {types:[ANSWERED]}) {     totalCount    }                                                                                                           viewedQuestionsCount: questions(filter: {types:[VIEWED]}) {    totalCount    }                                                                                                                  answerReactions {     totalCount   }                                                                                                                                                                questionReactions {      totalCount    }                                                                                                                                                    askQuestionsDailyLimit    askedTodayQuestions: questions(filter: {types:[ASKED], createdAt: {ge: {{time}}}}) {      totalCount    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4e6e71bf-1d97-4e88-bb67-a8a9b321a220",
+			"name": "getUser code Copy",
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/api/user?userId={{user_id}}",
+			"description": null,
+			"data": [],
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{admin_access_token}}"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "{{user_id}}"
+				}
+			],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "20fd7213-6562-4508-ae89-16ad1a2cf2f7",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);",
+							"if (tests[\"response code\"] !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "Authorization: Bearer {{admin_access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4fb9e8cc-bab0-4a41-8ce1-558e04427ffe",
+			"name": "Answer  to Not Exist Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "967d7f09-b67f-4856-b837-1338257c294d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_id = String(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answerQuestionTexyt\"] = jsonData.data.answerQuestion === null",
+							"tests[\"errorCode\"] = jsonData.errors[0].errorCode === 404000",
+							"if ((tests[\"response code\"] && tests[\"answerQuestionTexyt\"] && tests[\"errorCode\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}4ha\\\", text:\\\"Hello world {{random}}\\\") {id text }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "502599ca-98c1-4568-a733-dae3fee712ac",
+			"name": "Get user id",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5ffca3c5-b2ea-4e28-87ce-f57d5ab2854e",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);",
+							"postman.setEnvironmentVariable(\"time\", jsonData.data.user.createdAt);",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if (tests[\"response code\"] !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query User { user {id createdAt}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "51cb1009-1d06-4a24-88e2-2eccbb84f089",
+			"name": "SignIUp with email copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e7c66392-c137-4e60-988f-1b2470c05a52",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "64bc80aa-aeb2-47db-89d3-86c2189eab4e",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"email_random = \"sandbxtest8+\" + random + \"@gmail.com\"",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"email_random\", email_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "5366107f-e28b-452b-aed8-154143a1de6b",
+			"name": "getChambers",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "55ede192-ef0f-4611-ae80-da0bbfc139b0",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"chamber_id\", jsonData.data.chambers.edges[0].node.id);",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"console.log(postman.getEnvironmentVariable(\"chamber_id\"));"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "70162256-087b-4400-a576-40b775c00878",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 1000);",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\n\t\"query\": \"query {chambers {edges{ node {id name}}}}\"\n\n}\n\n\n",
+			"headers": "Authorization: Bearer {{access_token}}\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "59a4924e-1b52-4451-b4b3-42ffed8a4b78",
+			"name": "Search in questions all lists(without filter)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6e7cba1d-0204-453e-b43f-f7348dabc16f",
+						"type": "text/javascript",
+						"exec": [
+							"// var jsonData = JSON.parse(responseBody);",
+							"//     console.log( \"response body: \" ,  responseBody)",
+							"//     console.log(\"request: \" ,  request)",
+							"    ",
+							"// var question_id = pm.environment.get(\"question_id\");",
+							"// var chamber_id = pm.environment.get(\"chamber_id\");",
+							"",
+							"// tests[\"response code\"] = responseCode.code === 200;",
+							"// tests[\"question_id\"] = jsonData.data.searchInQuestions.edges[0].node.id === question_id;",
+							"// (tests[\"chamber_id\"] = jsonData.data.searchInQuestions.edges[0].node.chamber.id) === chamber_id;",
+							"",
+							"",
+							"//     console.log( \"response body: \" ,  responseBody)",
+							"//     console.log(\"request: \" ,  request)",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a1164707-daa8-4717-93a1-e20e5030fb28",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query SearchInQuestions {  searchInQuestions(text: \\\"How?\\\") {    edges {     node {  chamber{id}      id        text        totalAnswers        newAnswersCount      }    }    totalCount    totalNewAnswersCount  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "60b9b16d-85bc-407e-8aea-ad6b9f390da6",
+			"name": "ASK Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ccffd13b-40e8-49a0-8457-3dc233d44174",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.askQuestion.id);",
+							"postman.setEnvironmentVariable(\"question_text\", jsonData.data.askQuestion.text);",
+							"postman.setEnvironmentVariable(\"createdAt\", jsonData.data.askQuestion.createdAt);",
+							"",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"(tests[\"chamber_id\"] = jsonData.data.askQuestion.chamber.id) === chamber_id;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"id\");",
+							"if ((tests[\"response code\"] && tests[\"Body matches string\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c7c6cf58-c79c-4912-a43a-2a50fb650b40",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"postman.setEnvironmentVariable(\"random\", random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {askQuestion(chamberId:\\\"{{chamber_id}}\\\", text: \\\"What is it? {{random}}\\\") {id text chamber{id}}}\"\n}\n",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "63f404e9-9b01-476e-8c1e-1b7391b06470",
+			"name": "Select Question ASKED one list(without filter)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a5d316ea-257c-4fca-920f-b38d0ee1453b",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_text = pm.environment.get(\"question_text\");",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.asked.edges[0].node.isAnswered === false;",
+							"tests[\"question_text\"] = jsonData.data.asked.edges[0].node.text === question_text;",
+							"tests[\"question_id\"] = jsonData.data.asked.edges[0].node.id === question_id;",
+							"tests[\"total_count\"] = jsonData.data.asked.totalCount === 2;",
+							"tests[\"total_answers\"] = jsonData.data.asked.edges[0].node.totalAnswers === 0;",
+							"",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"question_text\"] && tests[\"total_answers\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"query\" : \"query MyMind { asked: questions(type: ASKED order:{ sort:ASC}) {    totalNewAnswersCount    totalCount        edges {     node {        text        id              newAnswersCount lastAnswered createdAt totalAnswers isAnswered}    }  }                                                                                                                                                                                                                answered: questions(type: ANSWERED) {    totalNewAnswersCount     totalCount      edges {    node {        text        id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered}}  }                                                                                                                                                                     reacted: questions(type: REACTED) {    totalNewAnswersCount     totalCount          edges {    node {       text        id        newAnswersCount lastAnswered createdAt totalAnswers  isAnswered  }}  }                                                                                                                                                        viewed: questions(type: VIEWED) {    totalNewAnswersCount     totalCount      edges {  node {    text    id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered    }}  }                                                                                                                                                                  flagged: questions(type: FLAGGED) {   totalNewAnswersCount     totalCount       edges {  node {    text    id   newAnswersCount lastAnswered createdAt totalAnswers   isAnswered   }}  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "64de7b15-2323-4c6a-9157-f58cd8319352",
+			"name": "ASK Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "80426c95-8e0d-4b91-916f-9e5a20445478",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.askQuestion.id);",
+							"postman.setEnvironmentVariable(\"question_text\", jsonData.data.askQuestion.text);",
+							"postman.setEnvironmentVariable(\"createdAt\", jsonData.data.askQuestion.createdAt);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"id\");",
+							"if ((tests[\"response code\"] && tests[\"Body matches string\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "dbb20717-ccdb-4724-90a5-b5f99d0fbc53",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"postman.setEnvironmentVariable(\"random\", random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {askQuestion(text: \\\"How much? {{random}}\\\") {id text chamber{id}}}\"\n}\n\n\n",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6ba4c8fc-bcc2-4b2b-99e5-4cd3cd99372c",
+			"name": "Answer  Anonymously to Not Exist Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"enabled": false
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a32f08d8-7f40-4132-b256-9ee17c0e97ad",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var text_random= pm.environment.get(\"text_random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"DATA\"] = jsonData.data.answerAnonymously === null;",
+							"//tests[\"id\"] = responseBody.has(\"id\")",
+							"if ((tests[\"response code\"] && tests[\"DATA\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d0f4832c-21eb-4b9a-94e0-f4e0b82105ca",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"Apple ,Samsung ,Coffe ,friend ,milk ,Dima ,Alina ,iPad ,Basilur ,KFC ,PlayStation ,Love ,USA ,CANADA ,freindship ,mother ,Tesla ,Amazon ,Netflix ,Incyte ,Naver ,Asian Paints ,Adobe Systems ,Autodesk ,Illumina , Don't know ,Yes ,No ,maybe ,Apricot ,Avocado ,Banana ,Bilberry ,Blackberry ,Blackcurrant ,Blueberry ,Boysenberry ,Buddha's hand (fingered citron) ,Crab apples ,Currant ,Cherry ,Cherimoya ,Chico fruit ,Cloudberry ,Coconut ,Cranberry ,Cucumber ,Custard apple ,Lost Tree ,The Cotton Tree ,Drago Milenario ,Cypress of Abarkuh ,Los Angeles ,San Luis Obispo ,Kings ,Banning ,\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<5; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"  if (i<wordCount-1)",
+							"    text_random += \" \";",
+							"  else",
+							"    text_random += \".\";",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation { answerAnonymously(questionId: \\\"{{question_id}}2\\\", text:\\\"{{text_random}}\\\") {id text }}\"\n}",
+			"headers": "Content-Type: application/json\n//Authorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "71761b0e-7008-4b19-8654-ce238d422cda",
+			"name": "Select Question FLAGGED",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4375f154-82eb-40f4-acb9-6b90669d14f9",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_text = pm.environment.get(\"question_text\");",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.questions.edges[0].node.isAnswered === true;",
+							"tests[\"question_id\"] = jsonData.data.questions.edges[0].node.id === question_id;",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"question_text\"] && tests[\"total_answers\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query { questions(type:FLAGGED){  edges{node{id  text isAnswered lastAnswered isFavourite isViewed totalAnswers newAnswersCount}}}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "741bbc30-943d-40dd-97c2-902802f7cf63",
+			"name": "getUser code",
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/api/user?userId={{user_id}}",
+			"description": null,
+			"data": [],
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{admin_access_token}}"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "{{user_id}}"
+				}
+			],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "20fd7213-6562-4508-ae89-16ad1a2cf2f7",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);",
+							"if (tests[\"response code\"] !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "Authorization: Bearer {{admin_access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "752eb8c8-02bf-4058-b82c-91d062a506c0",
+			"name": "ASK Question IN CHAMBER",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "80426c95-8e0d-4b91-916f-9e5a20445478",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.askQuestion.id);",
+							"postman.setEnvironmentVariable(\"question_text\", jsonData.data.askQuestion.text);",
+							"postman.setEnvironmentVariable(\"createdAt\", jsonData.data.askQuestion.createdAt);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches string\"] = responseBody.has(\"id\");",
+							"if ((tests[\"response code\"] && tests[\"Body matches string\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "dbb20717-ccdb-4724-90a5-b5f99d0fbc53",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"postman.setEnvironmentVariable(\"random\", random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {askQuestion(chamberId:\\\"{{chamber_id}}\\\", text: \\\"How much? {{random}}\\\") {id text chamber{id}}}\"\n}\n\n\n",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "804ad2bf-751a-433c-9f1a-edba0f257945",
+			"name": "Answer  to Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c0d19089-d179-469d-a89f-552e74c5f256",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);",
+							"",
+							"var text_random= pm.environment.get(\"text_random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f134f3c4-f666-4ca2-9d88-e4103367ca8b",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"I like vitamin water but I drink Fuji more these days,Don't know,Yes,No,Maybe,Big Mac - one love,Getting married to a,They rock,I wish I know,My boyfriend,Go to the beach,Coca cola,It's not me,Chinese food\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<1; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text question{chamber{id}}}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "80d5d06d-c256-4ab6-97ac-0c47862c63d6",
+			"name": "UNREACT on Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d35531f9-5dba-4c31-9861-3d56d2d44cba",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"code\"] = jsonData.data.unreactQuestion.code === 100012;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"Body matches message\"] = responseBody.has(\"Question successfully unreacted.\");",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {unreactQuestion(questionId: \\\"{{question_id}}\\\"){    message    code  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "86308d88-d4d4-4dd6-8f01-b3408e74cdc3",
+			"name": "Select Question REACTED one list (without order)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eff83a28-3591-4567-8838-e89da1e6750c",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_id\"] = jsonData.data.reacted.edges[0].node.id === question_id;",
+							"tests[\"total_count\"] = jsonData.data.reacted.totalCount === 1;",
+							"",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query MyMind { asked: questions(type: ASKED) {    totalNewAnswersCount    totalCount        edges {     node {        text        id              newAnswersCount lastAnswered createdAt totalAnswers isAnswered}    }  }                                                                                                                                                                                                                answered: questions(type: ANSWERED) {    totalNewAnswersCount     totalCount      edges {    node {        text        id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered}}  }                                                                                                                                                                     reacted: questions(type: REACTED) {    totalNewAnswersCount     totalCount          edges {    node {       text        id        newAnswersCount lastAnswered createdAt totalAnswers  isAnswered  }}  }                                                                                                                                                        viewed: questions(type: VIEWED) {    totalNewAnswersCount     totalCount      edges {  node {    text    id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered    }}  }                                                                                                                                                                  flagged: questions(type: FLAGGED) {   totalNewAnswersCount     totalCount       edges {  node {    text    id   newAnswersCount lastAnswered createdAt totalAnswers   isAnswered   }}  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "89ce8e96-ba7e-4c7b-b154-40e666af0116",
+			"name": "SignIUp with email",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e7c66392-c137-4e60-988f-1b2470c05a52",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.data.signup.access_token);",
+							"tests[\"Body matches string\"] = responseBody.has(\"access_token\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests['Body matches string'] && tests[\"response code\"]) !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "64bc80aa-aeb2-47db-89d3-86c2189eab4e",
+						"type": "text/javascript",
+						"exec": [
+							"var random =  Math.floor(Math.random() * (9999999 - 1000000)+1000000);",
+							"email_random = \"sandbxtest8+\" + random + \"@gmail.com\"",
+							"postman.setEnvironmentVariable(\"random\", random);",
+							"postman.setEnvironmentVariable(\"email_random\", email_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation {signup(emailOrPhone:\\\"{{email_random}}\\\", password:\\\"{{password}}\\\") {access_token}}\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "8aa60d79-a5d7-459c-9a6c-8c6d4731638e",
+			"name": "SignIUp with email ME copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bfe8697e-bdd1-44e1-9447-d046c03979a8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if (tests[\"response code\"] !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query User { user {id }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "8bba6a33-f6fe-44d1-8a40-70e2fef9a9e6",
+			"name": "Get user id",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9d71a60f-5701-41ef-8433-fa8f9978d4f0",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user_id\", jsonData.data.user.id);",
+							"postman.setEnvironmentVariable(\"time\", jsonData.data.user.createdAt);",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if (tests[\"response code\"] !==true ) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query User { user {id createdAt}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "971e0757-ebce-41c6-9083-6086eb2df2d0",
+			"name": "Select Question REACTED one list",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eff83a28-3591-4567-8838-e89da1e6750c",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_id\"] = jsonData.data.reacted.edges[0].node.id === question_id;",
+							"tests[\"total_count\"] = jsonData.data.reacted.totalCount === 1;",
+							"",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query MyMind { asked: questions(type: ASKED order:{field:ANSWER sort:ASC}) {    totalNewAnswersCount    totalCount        edges {     node {        text        id              newAnswersCount lastAnswered createdAt totalAnswers isAnswered}    }  }                                                                                                                                                                                                                answered: questions(type: ANSWERED) {    totalNewAnswersCount     totalCount      edges {    node {        text        id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered}}  }                                                                                                                                                                     reacted: questions(type: REACTED) {    totalNewAnswersCount     totalCount          edges {    node {       text        id        newAnswersCount lastAnswered createdAt totalAnswers  isAnswered  }}  }                                                                                                                                                        viewed: questions(type: VIEWED) {    totalNewAnswersCount     totalCount      edges {  node {    text    id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered    }}  }                                                                                                                                                                  flagged: questions(type: FLAGGED) {   totalNewAnswersCount     totalCount       edges {  node {    text    id   newAnswersCount lastAnswered createdAt totalAnswers   isAnswered   }}  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a284430d-8d71-46c1-971d-31407ef99e8e",
+			"name": "Answer  to Question in Chamber",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9a06a840-6c49-4be6-bfcc-6b31b51b446f",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"answer_id\", jsonData.data.answerQuestion.id);",
+							"",
+							"var text_random= pm.environment.get(\"text_random\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.answerQuestion.text === text_random;",
+							"tests[\"id\"] = responseBody.has(\"id\")",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"tests[\"chamber_id\"] = jsonData.data.answerQuestion.question.chamber.id === chamber_id;",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5f1f2ca4-7c0a-469e-a870-35e1aef76956",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"I like vitamin water but I drink Fuji more these days,Don't know,Yes,No,Maybe,Big Mac - one love,Getting married to a,They rock,I wish I know,My boyfriend,Go to the beach,Coca cola,It's not me,Chinese food\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<1; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation { answerQuestion(questionId: \\\"{{question_id}}\\\", text:\\\"{{text_random}}\\\") {id text question{ chamber{id}}}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b030f18a-d0eb-4cdb-a0d5-5ab713eb906f",
+			"name": "ADMIN Login",
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/login",
+			"description": null,
+			"data": [
+				{
+					"key": "emailOrPhone",
+					"value": "{{admin_email}}",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "{{admin_password}}",
+					"type": "text"
+				}
+			],
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1277a7c-3cc6-446e-849a-216caceb047f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b11f19c4-7ce6-43e3-98dd-cbb4bc6bef53",
+			"name": "UNREACT on Answer",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2e3a888a-02af-4814-80db-e0d668c241de",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log( \"response body: \" ,  responseBody)",
+							"console.log(\"request: \" ,  request)",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"//tests[\"message_text\"] = responseBody.has(\"Answer successfully unreacted.\");",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d0f4832c-21eb-4b9a-94e0-f4e0b82105ca",
+						"type": "text/javascript",
+						"exec": [
+							"var text_random = \"\";",
+							"function randomtext(){",
+							"",
+							"\tvar alphabet = \"Apple ,Samsung ,Coffe ,friend ,milk ,Dima ,Alina ,iPad ,Basilur ,KFC ,PlayStation ,Love ,USA ,CANADA ,freindship ,mother ,Tesla ,Amazon ,Netflix ,Incyte ,Naver ,Asian Paints ,Adobe Systems ,Autodesk ,Illumina , Don't know ,Yes ,No ,maybe ,Apricot ,Avocado ,Banana ,Bilberry ,Blackberry ,Blackcurrant ,Blueberry ,Boysenberry ,Buddha's hand (fingered citron) ,Crab apples ,Currant ,Cherry ,Cherimoya ,Chico fruit ,Cloudberry ,Coconut ,Cranberry ,Cucumber ,Custard apple ,Lost Tree ,The Cotton Tree ,Drago Milenario ,Cypress of Abarkuh ,Los Angeles ,San Luis Obispo ,Kings ,Banning ,\".split(\",\");",
+							"\tvar wordCount = 1;",
+							"\t\tfor(var i=0; i<wordCount; i++) {",
+							"  \tvar rand = null;",
+							"  \t\tfor (var x=0; x<5; x++) {",
+							"    \t\trand = Math.floor(Math.random() * alphabet.length);",
+							"    \t\ttext_random += alphabet[rand];",
+							"  }",
+							"  if (i<wordCount-1)",
+							"    text_random += \" \";",
+							"  else",
+							"    text_random += \".\";",
+							"}",
+							"}",
+							"randomtext()",
+							"postman.setEnvironmentVariable(\"text_random\", text_random);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {unreactAnswer(answerId: \\\"{{answer_id}}\\\"){    message    code  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b28e9c65-ab3f-45aa-a0c3-b2e3db959522",
+			"name": "User cabinet",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7de0d066-8965-4368-9d8d-d33a77cbc2da",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							" console.log( \"response body: \" ,  responseBody)",
+							" console.log(\"request: \" ,  request)",
+							"    ",
+							"    ",
+							"",
+							"tests[\"code\"] = responseCode.code === 200;",
+							"tests[\"askedQuestionsCount\"] = jsonData.data.user.askedQuestionsCount.totalCount === 2;",
+							"tests[\"answeredQuestionsCount\"] = jsonData.data.user.answeredQuestionsCount.totalCount === 0;",
+							"tests[\"viewedQuestionsCount\"] = jsonData.data.user.viewedQuestionsCount.totalCount === 1;",
+							"tests[\"answerReactions\"] = jsonData.data.user.answerReactions.totalCount === 0;",
+							"tests[\"questionReactions\"] = jsonData.data.user.questionReactions.totalCount === 0;",
+							"tests[\"askedTodayQuestions\"] = jsonData.data.user.askedTodayQuestions.totalCount === 2;",
+							"",
+							"",
+							"   ",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query UserCabinetStatistics {  user {    askedQuestionsCount: questions(filter: {types:[ASKED]}) {     totalCount     }                                                                                                                                                               answeredQuestionsCount: questions(filter: {types:[ANSWERED]}) {     totalCount    }                                                                                                           viewedQuestionsCount: questions(filter: {types:[VIEWED]}) {    totalCount    }                                                                                                                  answerReactions {     totalCount   }                                                                                                                                                                questionReactions {      totalCount    }                                                                                                                                                    askQuestionsDailyLimit    askedTodayQuestions: questions(filter: {types:[ASKED], createdAt: {ge: {{time}}}}) {      totalCount    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b6492519-6249-4378-9f8e-e4008af13280",
+			"name": "Select Question ANSWERED",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5849aee-ac93-40e6-a092-60a61ba4c870",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"var id = Number(pm.environment.get(\"question_id\"));",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"",
+							"tests[\"question_id\"] = jsonData.data.questions.edges[0].node.id === question_id;",
+							"tests[\"isFlagged\"] = jsonData.data.questions.edges[0].node.isFlagged === true;",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query { questions(type:ANSWERED){  edges{node{id  text isAnswered lastAnswered isFavourite isViewed  isFlagged totalAnswers newAnswersCount}}}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ba9eebb7-6aa2-4775-bd44-76e4a3d5e083",
+			"name": "Search in questions all lists(only ASKED list) Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8269a5e3-5bb4-4f2f-a968-37c46eefefa5",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_id\"] = jsonData.data.searchInQuestions.edges[0].node.id === question_id;",
+							"",
+							"(tests[\"chamber_id\"] = jsonData.data.searchInQuestions.edges[0].node.chamber.id) === chamber_id;",
+							"",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fb65874-550d-46c0-be76-05a0bb48c8d7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query SearchInQuestions {  searchInQuestions(text: \\\"How\\\", filter: {types: [ASKED]}) {    edges {     node { chamber{id}       id        text        totalAnswers        newAnswersCount      }    }    totalCount    totalNewAnswersCount  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c05342e8-0160-4760-a3ac-9034dcd3de14",
+			"name": "Verify user Email copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b6d94761-c266-41f2-bc94-ad8a63d19d53",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation { verifyCodeWithToken(code:{{emailCode}}){ isVerified }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c254bd13-87bb-40f6-b758-cc45916bebfb",
+			"name": "User cabinet",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b3925b48-5c99-4982-917c-a5c45ccd584f",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							" console.log( \"response body: \" ,  responseBody)",
+							" console.log(\"request: \" ,  request)",
+							"    ",
+							"    ",
+							"",
+							"tests[\"code\"] = responseCode.code === 200;",
+							"tests[\"askedQuestionsCount\"] = jsonData.data.user.askedQuestionsCount.totalCount === 0;",
+							"tests[\"answeredQuestionsCount\"] = jsonData.data.user.answeredQuestionsCount.totalCount === 1;",
+							"tests[\"viewedQuestionsCount\"] = jsonData.data.user.viewedQuestionsCount.totalCount === 0;",
+							"tests[\"answerReactions\"] = jsonData.data.user.answerReactions.totalCount === 0;",
+							"tests[\"questionReactions\"] = jsonData.data.user.questionReactions.totalCount === 0;",
+							"tests[\"askedTodayQuestions\"] = jsonData.data.user.askedTodayQuestions.totalCount === 0;",
+							"",
+							"",
+							"   ",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query UserCabinetStatistics {  user {    askedQuestionsCount: questions(filter: {types:[ASKED]}) {     totalCount     }                                                                                                                                                               answeredQuestionsCount: questions(filter: {types:[ANSWERED]}) {     totalCount    }                                                                                                           viewedQuestionsCount: questions(filter: {types:[VIEWED]}) {    totalCount    }                                                                                                                  answerReactions {     totalCount   }                                                                                                                                                                questionReactions {      totalCount    }                                                                                                                                                    askQuestionsDailyLimit    askedTodayQuestions: questions(filter: {types:[ASKED], createdAt: {ge: {{time}}}}) {      totalCount    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c365533e-2baf-4e03-be1c-1d4f730ff459",
+			"name": "Verify user Email Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b6d94761-c266-41f2-bc94-ad8a63d19d53",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"VERIFIED\"] = jsonData.data.verifyCodeWithToken.isVerified === \"VERIFIED\";",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"] && tests[\"VERIFIED\"]) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fdf28dd-27b4-4507-be97-8dcb3288e4fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation { verifyCodeWithToken(code:{{emailCode}}){ isVerified }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c703f5b6-b426-4680-a3c3-00c06ffbbc34",
+			"name": "Skip Question copy copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f90270ba-faf5-47c6-bfbd-ad6315932739",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"code\"] = jsonData.data.skipQuestion.code === 100006;",
+							"tests[\"message\"] = jsonData.data.skipQuestion.message === \"Question successfully skipped, questionId: \"+question_id;",
+							"",
+							"",
+							"if ((tests[\"response code\"] && tests[\"code\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {skipQuestion(questionId:\\\"{{question_id}}\\\") {message code}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c9202d17-61c6-447d-b59f-6ac4d320dac4",
+			"name": "Select Question ASKED one list(without order)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "83730d43-6e6a-4117-a231-5b01e2539e70",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_text = pm.environment.get(\"question_text\");",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.asked.edges[0].node.isAnswered === false;",
+							"tests[\"question_text\"] = jsonData.data.asked.edges[0].node.text === question_text;",
+							"tests[\"question_id\"] = jsonData.data.asked.edges[0].node.id === question_id;",
+							"tests[\"total_count\"] = jsonData.data.asked.totalCount === 2;",
+							"tests[\"total_answers\"] = jsonData.data.asked.edges[0].node.totalAnswers === 0;",
+							"",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"question_text\"] && tests[\"total_answers\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"query\" : \"query MyMind { asked: questions(type: ASKED) {    totalNewAnswersCount    totalCount        edges {     node {        text        id              newAnswersCount lastAnswered createdAt totalAnswers isAnswered}    }  }                                                                                                                                                                                                                answered: questions(type: ANSWERED) {    totalNewAnswersCount     totalCount      edges {    node {        text        id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered}}  }                                                                                                                                                                     reacted: questions(type: REACTED) {    totalNewAnswersCount     totalCount          edges {    node {       text        id        newAnswersCount lastAnswered createdAt totalAnswers  isAnswered  }}  }                                                                                                                                                        viewed: questions(type: VIEWED) {    totalNewAnswersCount     totalCount      edges {  node {    text    id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered    }}  }                                                                                                                                                                  flagged: questions(type: FLAGGED) {   totalNewAnswersCount     totalCount       edges {  node {    text    id   newAnswersCount lastAnswered createdAt totalAnswers   isAnswered   }}  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ca05f349-0366-40ab-9ead-40131690eb86",
+			"name": "Select Question ASKED one list(without sort)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6507624e-9422-412a-826e-59e9a14d48b5",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_text = pm.environment.get(\"question_text\");",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.asked.edges[0].node.isAnswered === false;",
+							"tests[\"question_text\"] = jsonData.data.asked.edges[0].node.text === question_text;",
+							"tests[\"question_id\"] = jsonData.data.asked.edges[0].node.id === question_id;",
+							"tests[\"total_count\"] = jsonData.data.asked.totalCount === 2;",
+							"tests[\"total_answers\"] = jsonData.data.asked.edges[0].node.totalAnswers === 0;",
+							"",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"question_text\"] && tests[\"total_answers\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"query\" : \"query MyMind { asked: questions(type: ASKED order:{field:ANSWER}) {    totalNewAnswersCount    totalCount        edges {     node {        text        id              newAnswersCount lastAnswered createdAt totalAnswers isAnswered}    }  }                                                                                                                                                                                                                answered: questions(type: ANSWERED) {    totalNewAnswersCount     totalCount      edges {    node {        text        id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered}}  }                                                                                                                                                                     reacted: questions(type: REACTED) {    totalNewAnswersCount     totalCount          edges {    node {       text        id        newAnswersCount lastAnswered createdAt totalAnswers  isAnswered  }}  }                                                                                                                                                        viewed: questions(type: VIEWED) {    totalNewAnswersCount     totalCount      edges {  node {    text    id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered    }}  }                                                                                                                                                                  flagged: questions(type: FLAGGED) {   totalNewAnswersCount     totalCount       edges {  node {    text    id   newAnswersCount lastAnswered createdAt totalAnswers   isAnswered   }}  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cbc8ec34-e41c-49c6-84b3-fceb4bf5e7e8",
+			"name": "Answer  to Question (500 symbols )",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0f0ca6b2-4675-490f-9a3a-5c82cca2b6f8",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var answer = postman.getEnvironmentVariable(\"big_answer\");",
+							"var assert_text = \"Question is too long. Text:\" + answer;",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"error_code\"] = jsonData.errors[0].errorCode === 400016;",
+							"if ((tests[\"response code\"] && tests[\"error_code\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation { askQuestion(text:\\\"{{big_answer}}\\\") {id}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cecf53b2-aa64-4b2d-83b5-e97a39efffd0",
+			"name": "Skip Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e4aba986-bbf8-4336-ab3f-7079250694b2",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"code\"] = jsonData.errors[0].errorCode === 400033;",
+							"tests[\"message\"] = responseBody.has(\"Cannot skip answered question\");",
+							"",
+							"",
+							"if ((tests[\"response code\"] && tests[\"code\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation {skipQuestion(questionId:\\\"{{question_id}}\\\") {message code}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "d3479111-938d-444f-8d2a-7449e94606c7",
+			"name": "Update User Email copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4896bdc7-2550-4f0b-af5a-c009cc839b91",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var user_id = pm.environment.get(\"user_id\");",
+							"var email = pm.environment.get(\"email_random\");",
+							"var gender = pm.environment.get(\"gender\");",
+							"var random = pm.environment.get(\"random\");",
+							"var userAvatar = pm.environment.get(\"userAvatar\")",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"userId\"] = jsonData.data.updateUser.id === user_id;",
+							"tests[\"email\"] = jsonData.data.updateUser.email === email;",
+							"tests[\"gender\"] = jsonData.data.updateUser.gender === gender;",
+							"tests[\"displayedId\"] = responseBody.has(\"displayedId\");",
+							"tests[\"birthday\"] = jsonData.data.updateUser.birthday === Number(\"153\" + random);",
+							"tests[\"state\"] = jsonData.data.updateUser.state === \"ACTIVE_USER\";",
+							"tests[\"avatar_id\"] = jsonData.data.updateUser.avatar_id === Number(userAvatar);",
+							"if ((tests[\"response code\"] && tests[\"userId\"] && tests[\"email\"] && tests[\"gender\"] && tests[\"displayedId\"] && tests[\"birthday\"] && tests[\"state\"] && tests[\"avatar_id\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"mutation updateUser { updateUser (birthday:153{{random}}, gender:{{gender}}, avatar_id:{{userAvatar}}) { id, email, gender, displayedId, birthday, state, avatar_id }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "d3793d89-4234-4416-a082-fc5ae8f51fd3",
+			"name": "Search in questions all lists(only ASKED list)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8269a5e3-5bb4-4f2f-a968-37c46eefefa5",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_id\"] = jsonData.data.searchInQuestions.edges[0].node.id === question_id;",
+							"",
+							"(tests[\"chamber_id\"] = jsonData.data.searchInQuestions.edges[0].node.chamber.id) === chamber_id;",
+							"",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7fb65874-550d-46c0-be76-05a0bb48c8d7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query SearchInQuestions {  searchInQuestions(text: \\\"How\\\", filter: {types: [ASKED]}) {    edges {     node { chamber{id}       id        text        totalAnswers        newAnswersCount      }    }    totalCount    totalNewAnswersCount  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e30480d3-c5be-4d51-a5ce-024012ee1c00",
+			"name": "Search in questions all lists Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a64b9f85-8ba2-450c-83ca-04f012867d75",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"    ",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"question_id\"] = jsonData.data.searchInQuestions.edges[0].node.id === question_id;",
+							"(tests[\"chamber_id\"] = jsonData.data.searchInQuestions.edges[0].node.chamber.id) === chamber_id;",
+							"console.log(postman.get);",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0d9cf705-2e2f-48af-b1ac-e11b1dd12bcc",
+						"type": "text/javascript",
+						"exec": [
+							"setTimeout(function(){}, 10000);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query SearchInQuestions {  searchInQuestions(text: \\\"How\\\", filter: {types: [ASKED, ANSWERED, REACTED, VIEWED]}) {    edges {     node { chamber{id}       id        text        totalAnswers        newAnswersCount      }    }    totalCount    totalNewAnswersCount  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e8362c80-29cf-4a0c-8e71-a345babc4f52",
+			"name": "Select Question ANSWERED one list Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "452de9d0-4be1-4c9e-886d-ac91e315f017",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"question_text\"] && tests[\"total_answers\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"tests[\"chamber_id1\"] = jsonData.data.answered.edges[0].node.chamber.id === chamber_id;",
+							"tests[\"chamber_id2\"] = jsonData.data.answered.edges[1].node.chamber.id === \"themind_chamber\";",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"query\" : \"query MyMind { asked: questions(type: ASKED order:{field:ANSWER sort:ASC}) {    totalNewAnswersCount    totalCount        edges {     node {        text        id              newAnswersCount lastAnswered createdAt totalAnswers isAnswered}    }  }                                                                                                                                                                                                                answered: questions(type: ANSWERED) {    totalNewAnswersCount     totalCount      edges {    node { chamber{id}       text        id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered}}  }                                                                                                                                                                     reacted: questions(type: REACTED) {    totalNewAnswersCount     totalCount          edges {    node {       text        id        newAnswersCount lastAnswered createdAt totalAnswers  isAnswered  }}  }                                                                                                                                                        viewed: questions(type: VIEWED) {    totalNewAnswersCount     totalCount      edges {  node {    text    id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered    }}  }                                                                                                                                                                  flagged: questions(type: FLAGGED) {   totalNewAnswersCount     totalCount       edges {  node {    text    id   newAnswersCount lastAnswered createdAt totalAnswers   isAnswered   }}  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e99d6e86-33d5-40fd-ad2a-47d5cd7250e9",
+			"name": "NEXT Questions",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "05a6d063-e96d-4ede-92b4-cc172138d3df",
+						"type": "text/javascript",
+						"exec": [
+							"var  question_number = pm.environment.get(\"question_number\");",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"var question = jsonData.data.nextQuestions;",
+							"",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"",
+							"",
+							"postman.setEnvironmentVariable(\"question_id\", jsonData.data.nextQuestions[0].id);",
+							"",
+							"tests[\"chamber_id\"] = jsonData.data.nextQuestions[0].chamber.id === \"themind_chamber\";",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\": \"query {nextQuestions(count: {{question_number}}){chamber{id name} id text}}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ebe27bdc-ae25-4f4d-a30d-491678594d2c",
+			"name": "User cabinet",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b2eb1b6-e31f-48e9-98d0-7640cf38add0",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							" console.log( \"response body: \" ,  responseBody)",
+							" console.log(\"request: \" ,  request)",
+							"    ",
+							"    ",
+							"",
+							"tests[\"code\"] = responseCode.code === 200;",
+							"tests[\"askedQuestionsCount\"] = jsonData.data.user.askedQuestionsCount.totalCount === 2;",
+							"tests[\"answeredQuestionsCount\"] = jsonData.data.user.answeredQuestionsCount.totalCount === 0;",
+							"tests[\"viewedQuestionsCount\"] = jsonData.data.user.viewedQuestionsCount.totalCount === 0;",
+							"tests[\"answerReactions\"] = jsonData.data.user.answerReactions.totalCount === 0;",
+							"tests[\"questionReactions\"] = jsonData.data.user.questionReactions.totalCount === 0;",
+							"tests[\"askedTodayQuestions\"] = jsonData.data.user.askedTodayQuestions.totalCount === 2;",
+							"",
+							"",
+							"   ",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22a393de-b281-49d9-bee4-9c1708508845",
+						"type": "text/javascript",
+						"exec": [
+							"var userAvatar =  Math.floor(Math.random() * (13 - 1)+1);",
+							"var gender;",
+							"if (userAvatar >= 6) {",
+							"    gender = \"MALE\"",
+							"} else {",
+							"    gender = \"FEMALE\"",
+							"}",
+							"postman.setEnvironmentVariable(\"userAvatar\", userAvatar);",
+							"postman.setEnvironmentVariable(\"gender\", gender);"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query UserCabinetStatistics {  user {    askedQuestionsCount: questions(filter: {types:[ASKED]}) {     totalCount     }                                                                                                                                                               answeredQuestionsCount: questions(filter: {types:[ANSWERED]}) {     totalCount    }                                                                                                           viewedQuestionsCount: questions(filter: {types:[VIEWED]}) {    totalCount    }                                                                                                                  answerReactions {     totalCount   }                                                                                                                                                                questionReactions {      totalCount    }                                                                                                                                                    askQuestionsDailyLimit    askedTodayQuestions: questions(filter: {types:[ASKED], createdAt: {ge: {{time}}}}) {      totalCount    }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f030b06f-4117-414f-9f33-96e1a0cb892b",
+			"name": "Check answer REACTION (Skip myReaction)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5734c044-04aa-40b2-83ee-887c0b013c6a",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"",
+							"var answer_id = pm.environment.get(\"answer_id\");",
+							"",
+							"tests[\"myReaction_null\"] = jsonData.data.viewAnswers.edges == \"\";",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query {  viewAnswers(questionId: \\\"{{question_id}}\\\" skipMyAnswer: true ){    edges{     node{       id       text              myReaction       reactions{       type       count     }  } }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "fc8f99c3-fc86-48df-9172-4af022968176",
+			"name": "Check question REACTION (EMPTY)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb4f4aee-2b78-4daa-b58d-dfeefc3e6a12",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"var answer_id = pm.environment.get(\"answer_id\");",
+							"",
+							"tests[\"question_id\"] = responseBody.has(\"myReaction\");",
+							"tests[\"question_id\"] = responseBody.has(question_id);",
+							"",
+							"",
+							"tests[\"myReaction\"] = jsonData.data.questions.edges[0].node.myReaction === null;",
+							"tests[\"question_reaction\"] = jsonData.data.questions.edges[0].node.reactions.isEmpty();",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query {  questions(type:  ASKED ){   edges{      node{        id        text        myAnswer {          id        }        reactions{         type         count       }       myReaction    }   } }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "fc9b2805-d308-4f47-95f1-04e4bd7af668",
+			"name": "Select Question ANSWERED one list",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "596fe6d2-ee9c-488a-ab57-6c43215faa97",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var question_text = pm.environment.get(\"question_text\");",
+							"var question_id = pm.environment.get(\"question_id\");",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"tests[\"answer_text\"] = jsonData.data.answered.edges[0].node.isAnswered === true;",
+							"tests[\"question_text\"] = jsonData.data.answered.edges[0].node.text === question_text;",
+							"tests[\"question_id\"] = jsonData.data.answered.edges[0].node.id === question_id;",
+							"tests[\"total_count\"] = jsonData.data.answered.totalCount === 1;",
+							"tests[\"total_answers\"] = jsonData.data.answered.edges[0].node.totalAnswers === 1;",
+							"",
+							"if ((tests[\"response code\"] && tests[\"answer_text\"] && tests[\"question_text\"] && tests[\"total_answers\"] ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"var chamber_id = pm.environment.get(\"chamber_id\");",
+							"tests[\"chamber_id\"] = jsonData.data.answered.edges[0].node.chamber.id === chamber_id;",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"query\" : \"query MyMind { asked: questions(type: ASKED order:{field:ANSWER sort:ASC}) {    totalNewAnswersCount    totalCount        edges {     node {        text        id              newAnswersCount lastAnswered createdAt totalAnswers isAnswered}    }  }                                                                                                                                                                                                                answered: questions(type: ANSWERED) {    totalNewAnswersCount     totalCount      edges {    node { chamber{id}       text        id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered}}  }                                                                                                                                                                     reacted: questions(type: REACTED) {    totalNewAnswersCount     totalCount          edges {    node {       text        id        newAnswersCount lastAnswered createdAt totalAnswers  isAnswered  }}  }                                                                                                                                                        viewed: questions(type: VIEWED) {    totalNewAnswersCount     totalCount      edges {  node {    text    id    newAnswersCount lastAnswered createdAt totalAnswers isAnswered    }}  }                                                                                                                                                                  flagged: questions(type: FLAGGED) {   totalNewAnswersCount     totalCount       edges {  node {    text    id   newAnswersCount lastAnswered createdAt totalAnswers   isAnswered   }}  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "fdcf5857-9420-4516-be3e-299c7050a27f",
+			"name": "getUser code copy",
+			"url": "{{admin_protocol}}://{{admin_server}}{{admin_port}}/admin/api/user?userId={{user_id}}",
+			"description": null,
+			"data": [],
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{admin_access_token}}"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "{{user_id}}"
+				}
+			],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "20fd7213-6562-4508-ae89-16ad1a2cf2f7",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"postman.setEnvironmentVariable(\"emailCode\", jsonData.user.system.verification_codes.email);",
+							"if (tests[\"response code\"] !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "Authorization: Bearer {{admin_access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ff22d2d7-2321-439a-9291-b7fe958d0253",
+			"name": "Flag Question",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1aa62ac9-a65c-4e9d-81b4-4a78e7c03186",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"if ((tests[\"response code\"]  ) !== true) {",
+							"    console.log( \"response body: \" ,  responseBody)",
+							"    console.log(\"request: \" ,  request)",
+							"}",
+							"tests[\"message\"] = jsonData.data.flagQuestion.message === \"Question successfully flagged.\";"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"mutation  {flagQuestion (questionId:\\\"{{question_id}}\\\", reason: SPAM_SALES){ message }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ff5b7834-30ce-4b31-aa0d-26edb232b2a0",
+			"name": "Search in questions all lists(without filter) Copy",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6e7cba1d-0204-453e-b43f-f7348dabc16f",
+						"type": "text/javascript",
+						"exec": [
+							"// var jsonData = JSON.parse(responseBody);",
+							"//     console.log( \"response body: \" ,  responseBody)",
+							"//     console.log(\"request: \" ,  request)",
+							"    ",
+							"// var question_id = pm.environment.get(\"question_id\");",
+							"// var chamber_id = pm.environment.get(\"chamber_id\");",
+							"",
+							"// tests[\"response code\"] = responseCode.code === 200;",
+							"// tests[\"question_id\"] = jsonData.data.searchInQuestions.edges[0].node.id === question_id;",
+							"// (tests[\"chamber_id\"] = jsonData.data.searchInQuestions.edges[0].node.chamber.id) === chamber_id;",
+							"",
+							"",
+							"//     console.log( \"response body: \" ,  responseBody)",
+							"//     console.log(\"request: \" ,  request)",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a1164707-daa8-4717-93a1-e20e5030fb28",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\" : \"query SearchInQuestions {  searchInQuestions(text: \\\"How?\\\") {    edges {     node {  chamber{id}      id        text        totalAnswers        newAnswersCount      }    }    totalCount    totalNewAnswersCount  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ff98a652-5416-4aa1-b393-f1d5ef5b0ea4",
+			"name": "Check answer REACTION (EMPTY)",
+			"url": "{{protocol}}://{{server}}{{port}}/graphql",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d07c2bc0-520a-4f59-adb6-f8228ef33a43",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"response code\"] = responseCode.code === 200;",
+							"",
+							"tests[\"myReaction_text\"] = jsonData.data.viewAnswers.edges[0].node.myReaction === null;",
+							"tests[\"answers_reaction\"] = jsonData.data.viewAnswers.edges[0].node.reactions.isEmpty();",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t\"query\":\"query {  viewAnswers(questionId: \\\"{{question_id}}\\\" ){    edges{     node{       id       text              myReaction       reactions{       type       count     }  } }  }}\"\n}",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{access_token}}\n",
+			"pathVariables": {}
+		}
+	]
+}
